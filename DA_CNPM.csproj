@@ -77,6 +77,7 @@
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\BookDAL.cs" />
+    <Compile Include="DAL\CategoryDAL.cs" />
     <Compile Include="DAL\DTO\Account.cs" />
     <Compile Include="DAL\AccountDAL.cs" />
     <Compile Include="DAL\DataProvider.cs" />

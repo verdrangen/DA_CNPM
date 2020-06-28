@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DA_CNPM.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,17 +9,17 @@ namespace DA_CNPM.BLL
 {
     class CategoryBLL
     {
-        private static BookBLL instance;
-        public static BookBLL Instance
+        private static CategoryBLL instance;
+        public static CategoryBLL Instance
         {
-            get { if (instance == null) instance = new BookBLL(); return instance; }
+            get { if (instance == null) instance = new CategoryBLL(); return instance; }
             private set { instance = value; }
         }
-        public List<BOOK> bookList { get; set; }
-        public void LoadbookList()
+        public List<CATEGORY> cateList { get; set; }
+        public void LoadcateList()
         {
             //bookList = LoadBOOKList();
-            bookList = BookDAL.Instance.LoadBOOKList();
+            cateList = CategoryDAL.Instance.LoadCATEList();
         }
     }
 }
