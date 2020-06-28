@@ -71,7 +71,7 @@ namespace DA_CNPM.DAL
             BOOK tmp = DataProvider.Instance.Entity_DB.BOOKs.Find(book.ID_BOOK);
             tmp.TITLE = book.TITLE;
             tmp.AUTHOR = book.AUTHOR;
-            tmp.CATEGORY = book.CATEGORY;
+            tmp.ID_CATEGORY = book.ID_CATEGORY;
             tmp.PUBLISH_YEAR = book.PUBLISH_YEAR;
             tmp.PDF_LINK = book.PDF_LINK;
             tmp.OVERVIEW = book.OVERVIEW;

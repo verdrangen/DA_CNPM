@@ -50,7 +50,7 @@
             <PropertyRef Name="ID_CATEGORY" />
           </Key>
           <Property Name="ID_CATEGORY" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="CATE_NAME" Type="nchar" MaxLength="100" />
+          <Property Name="CATE_NAME" Type="nchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="GROUP">
           <Key>
@@ -360,8 +360,8 @@
             <End Role="BOOKMARK" EntitySet="BOOKMARKs" />
           </AssociationSet>
           <AssociationSet Name="FK_SUPPORT_USER" Association="DOAN_CNPMModel.FK_SUPPORT_USER">
-            <End Role="ACCOUNT_DETAIL" EntitySet="ACCOUNT_DETAIL" />
-            <End Role="SUPPORT" EntitySet="SUPPORTs" />
+            <End EntitySet="ACCOUNT_DETAIL" Role="ACCOUNT_DETAIL" />
+            <End EntitySet="SUPPORTs" Role="SUPPORT" />
           </AssociationSet>
           <AssociationSet Name="FK_USER_REVIEW_USER" Association="DOAN_CNPMModel.FK_USER_REVIEW_USER">
             <End Role="ACCOUNT_DETAIL" EntitySet="ACCOUNT_DETAIL" />
@@ -485,7 +485,7 @@
             <PropertyRef Name="ID_CATEGORY" />
           </Key>
           <Property Name="ID_CATEGORY" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="CATE_NAME" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="CATE_NAME" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="BOOKs" Relationship="DOAN_CNPMModel.FK_BOOK_CATEGORY" FromRole="CATEGORY" ToRole="BOOK" />
         </EntityType>
         <EntityType Name="GROUP">
@@ -574,10 +574,10 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_SUPPORT_USER">
-          <End Type="DOAN_CNPMModel.ACCOUNT_DETAIL" Role="ACCOUNT_DETAIL" Multiplicity="0..1">
+          <End Type="DOAN_CNPMModel.ACCOUNT_DETAIL" Multiplicity="0..1" Role="ACCOUNT_DETAIL">
             <OnDelete Action="Cascade" />
           </End>
-          <End Type="DOAN_CNPMModel.SUPPORT" Role="SUPPORT" Multiplicity="*" />
+          <End Type="DOAN_CNPMModel.SUPPORT" Multiplicity="*" Role="SUPPORT" />
           <ReferentialConstraint>
             <Principal Role="ACCOUNT_DETAIL">
               <PropertyRef Name="ID_ACCOUNT" />

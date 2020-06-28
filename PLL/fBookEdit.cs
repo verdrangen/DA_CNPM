@@ -18,13 +18,35 @@ namespace DA_CNPM
         public fBookEdit()
         {
             InitializeComponent();
+            CategoryBLL.Instance.LoadcateList();
+            LoadCATEcbb();
+            if (CategoryBLL.Instance.cateList.Any())
+            {
+                MessageBox.Show("Co du lieu");
+            }
+            else
+            {
+                MessageBox.Show("Khong du lieu");
+            }
+        }
+        public void LoadCATEcbb()
+        {
+            /*foreach (CATEGORY item in CategoryBLL.Instance.cateList)
+            {
+                cbb_book_cate.Items.Add(item.ID_CATEGORY);
+            }*/
+            cbb_book_cate.DisplayMember = "CATE_NAME";
+            cbb_book_cate.ValueMember = "ID_CATEGORY";
+            cbb_book_cate.DataSource = CategoryBLL.Instance.cateList;
         }
         public fBookEdit(BOOK book)
         {
             InitializeComponent();
+            CategoryBLL.Instance.LoadcateList();
+            LoadCATEcbb();
             tb_book_id.Text = book.ID_BOOK.ToString();
             tb_book_title.Text = book.TITLE;
-            tb_book_category_id.Text = book.ID_CATEGORY.ToString();
+            cbb_book_cate.SelectedValue = book.ID_CATEGORY;
             tb_book_author.Text = book.AUTHOR;
             tb_book_publish.Text = book.PUBLISH_YEAR.ToString();
             rtb_book_pdf.Text = book.PDF_LINK;
@@ -50,7 +72,7 @@ namespace DA_CNPM
             if (MessageBox.Show("Xác nhận thêm sách?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
 
-                if (String.IsNullOrEmpty(tb_book_title.Text) || String.IsNullOrEmpty(tb_book_category_id.Text) || String.IsNullOrEmpty(tb_book_author.Text)
+                if (String.IsNullOrEmpty(tb_book_title.Text) || String.IsNullOrEmpty(cbb_book_cate.Text) || String.IsNullOrEmpty(tb_book_author.Text)
                     && String.IsNullOrEmpty(tb_book_publish.Text) || String.IsNullOrEmpty(rtb_book_pdf.Text) || String.IsNullOrEmpty(tb_book_overview.Text) || pb_book_cover.Image == null)
                 {
                     MessageBox.Show("Dữ liệu nhập chưa đúng hoặc chưa đầy đủ!");
@@ -59,7 +81,8 @@ namespace DA_CNPM
                 BOOK booktemp = new BOOK();
                 booktemp.ID_BOOK = Convert.ToInt32(tb_book_id.Text);
                 booktemp.TITLE = tb_book_title.Text;
-                booktemp.ID_CATEGORY = Convert.ToInt32(tb_book_category_id.Text);
+                booktemp.ID_CATEGORY = Convert.ToInt32(cbb_book_cate.SelectedValue);
+                //booktemp.ID_CATEGORY = Convert.ToInt32(((CATEGORY)cbb_book_cate.SelectedItem).Value);
                 booktemp.AUTHOR = tb_book_author.Text;
                 booktemp.PUBLISH_YEAR = tb_book_publish.Text;
                 booktemp.PDF_LINK = rtb_book_pdf.Text;
@@ -74,5 +97,10 @@ namespace DA_CNPM
                 //this.Close();
             }
         }
+
+        private void cbb_book_cate_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
     }
 }
