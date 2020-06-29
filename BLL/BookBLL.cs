@@ -22,6 +22,10 @@ namespace DA_CNPM.BLL
             //bookList = LoadBOOKList();
             bookList = BookDAL.Instance.LoadBOOKList();
         }
+        public List<BOOK> LoadRandomBook()
+        {
+            return BookDAL.Instance.LoadRandomBook();
+        }
         /*public List<Book> LoadBookList()
         {
             return BookDAL.Instance.LoadBookList();

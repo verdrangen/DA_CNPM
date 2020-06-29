@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DA_CNPM.BLL;
 using DA_CNPM.DAL;
 
 namespace DA_CNPM.PLL
@@ -17,7 +18,8 @@ namespace DA_CNPM.PLL
         public MainForm()
         {
             InitializeComponent();
-           // this.ControlBox = false;
+            EntityBLL.Instance.LoadEntity_DB();
+            LoadRandomBook();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -61,34 +63,55 @@ namespace DA_CNPM.PLL
         public Panel GenPanel(BOOK book)
         {
             PictureBox pictureBox = new PictureBox();
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox.Width =  220;
+            pictureBox.Height = 190;
+            pictureBox.Visible = true;
             byte[] img = book.COVER;
             MemoryStream byteimg = new MemoryStream(img);
             Image image = new Bitmap(byteimg);
             pictureBox.Image = image;
-            pictureBox.Width =  220;
-            pictureBox.Height = 293;
-            pictureBox.Visible = true;
+            pictureBox.SendToBack();
+            pictureBox.Dock = DockStyle.Top;
             Label label = new Label();
             label.AutoEllipsis = true;
             label.Text = book.TITLE;
-            label.Width =220;
-            label.Height = 27;
+            label.Width =180;
+            label.Height = 20;
             label.Visible = true;
+            label.BringToFront();
+            label.Dock = DockStyle.Bottom;
 
             Panel p1 = new Panel();
             p1.Width = 220;
-            p1.Height = 330;
+            p1.Height = 220;
+            p1.Margin = new Padding(10, 0, 10, 0);
+            p1.BackColor = Color.LightGray;
             p1.Controls.Add(pictureBox);
+            //label.Left = (p1.Width - label.Width) / 2;
             p1.Controls.Add(label);
             p1.Visible = true;
 
-            pictureBox.Click += delegate (object sender ,EventArgs e) { CheckBook(sender, e, book); };
-            label.Click += delegate (object sender, EventArgs e) { CheckBook(sender, e, book); };
+            //pictureBox.Click += delegate (object sender ,EventArgs e) { CheckBook(sender, e, book); };
+            //label.Click += delegate (object sender, EventArgs e) { CheckBook(sender, e, book); };
+            pictureBox.Click += RequestLogin;
+            label.Click += RequestLogin;
             return p1;
         }
-        public void CheckBook(object sender ,EventArgs e,BOOK book)
+        public void LoadRandomBook()
+        {
+            foreach (BOOK item in BookBLL.Instance.LoadRandomBook())
+            {
+                flp_P1.Controls.Add(GenPanel(item));
+            }
+        } 
+        /*public void CheckBook(object sender ,EventArgs e,BOOK book)
         {
 
+        }*/
+        void RequestLogin(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đăng nhập để được xem chi tiết.");
         }
     }
 }

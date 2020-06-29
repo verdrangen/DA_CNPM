@@ -36,6 +36,12 @@ namespace DA_CNPM.DAL
             var bookList = DataProvider.Instance.Entity_DB.BOOKs.Select(p => p).ToList();
             return bookList;
         }
+        public List<BOOK> LoadRandomBook()
+        {
+            //var bookList = DataProvider.Instance.Entity_DB.Database.SqlQuery<BOOK>("USP_GetRandomBook").ToList();
+            var bookList = DataProvider.Instance.Entity_DB.USP_GetRandomBook().ToList();
+            return bookList;
+        }
         public void eSaveChanges_Add(BOOK book)
         {
             //DataProvider.Instance.Entity_DB.BOOKs.AddRange(BookBLL.Instance.bookList);

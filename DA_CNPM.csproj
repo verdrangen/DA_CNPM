@@ -103,6 +103,9 @@
     <Compile Include="DAL\GROUP.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\USP_GetRandomBook_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
     <Compile Include="PLL\fBookAdd.cs">
       <SubType>Form</SubType>
     </Compile>

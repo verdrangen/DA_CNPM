@@ -18,7 +18,7 @@ namespace DA_CNPM
         public fBookEdit()
         {
             InitializeComponent();
-            CategoryBLL.Instance.LoadcateList();
+            //CategoryBLL.Instance.LoadcateList();
             LoadCATEcbb();
             if (CategoryBLL.Instance.cateList.Any())
             {

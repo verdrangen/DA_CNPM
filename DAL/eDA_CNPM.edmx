@@ -239,6 +239,7 @@
         <Function Name="USP_GetAccountDetailList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="USP_GetAccountList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="USP_GetBookList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="USP_GetRandomBook" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="USP_GetSupportList" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="USP_Login" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="userName" Type="nchar" Mode="In" />
@@ -383,6 +384,7 @@
             <End Role="REVIEW" EntitySet="REVIEWs" />
             <End Role="USER_REVIEW" EntitySet="USER_REVIEW" />
           </AssociationSet>
+          <FunctionImport Name="USP_GetRandomBook" EntitySet="BOOKs" ReturnType="Collection(DOAN_CNPMModel.BOOK)" />
         </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -647,6 +649,16 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="USP_GetRandomBook_Result">
+          <Property Type="Int32" Name="ID_BOOK" Nullable="false" />
+          <Property Type="String" Name="TITLE" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="AUTHOR" Nullable="true" MaxLength="300" />
+          <Property Type="Int32" Name="ID_CATEGORY" Nullable="true" />
+          <Property Type="String" Name="PUBLISH_YEAR" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="PDF_LINK" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="OVERVIEW" Nullable="true" MaxLength="Max" />
+          <Property Type="Binary" Name="COVER" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -787,6 +799,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="USP_GetRandomBook" FunctionName="DOAN_CNPMModel.Store.USP_GetRandomBook" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

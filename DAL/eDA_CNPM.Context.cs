@@ -214,5 +214,15 @@ namespace DA_CNPM.DAL
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<ACCOUNT>("USP_Login", mergeOption, userNameParameter, passwordParameter, groupIDParameter);
         }
+    
+        public virtual ObjectResult<BOOK> USP_GetRandomBook()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BOOK>("USP_GetRandomBook");
+        }
+    
+        public virtual ObjectResult<BOOK> USP_GetRandomBook(MergeOption mergeOption)
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BOOK>("USP_GetRandomBook", mergeOption);
+        }
     }
 }

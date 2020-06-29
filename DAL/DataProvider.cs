@@ -14,7 +14,7 @@ namespace DA_CNPM
         private static DataProvider instance;
 
 
-        private string connectionSTR = "Data Source=TRUNG2K-6OE7VFH;Initial Catalog=DOAN_CNPM;Integrated Security=True";
+        private string connectionSTR = "Data Source=VERDRANGEN;Initial Catalog=DOAN_CNPM;Integrated Security=True";
 
         public static DataProvider Instance
         {

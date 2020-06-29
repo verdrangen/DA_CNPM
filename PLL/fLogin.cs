@@ -17,7 +17,7 @@ namespace DA_CNPM
         public fLogin()
         {
             InitializeComponent();
-            EntityBLL.Instance.LoadEntity_DB();
+            //EntityBLL.Instance.LoadEntity_DB();
         }
 
         private void txbUsername_TextChanged(object sender, EventArgs e)

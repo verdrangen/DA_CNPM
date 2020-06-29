@@ -125,11 +125,10 @@
             this.tpBook.Controls.Add(this.panel19);
             this.tpBook.Controls.Add(this.panel10);
             this.tpBook.Controls.Add(this.panel9);
-            this.tpBook.Location = new System.Drawing.Point(4, 29);
-            this.tpBook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tpBook.Location = new System.Drawing.Point(4, 22);
             this.tpBook.Name = "tpBook";
-            this.tpBook.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tpBook.Size = new System.Drawing.Size(1339, 710);
+            this.tpBook.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpBook.Size = new System.Drawing.Size(890, 457);
             this.tpBook.TabIndex = 1;
             this.tpBook.Text = "Quản lí sách";
             this.tpBook.UseVisualStyleBackColor = true;
@@ -139,18 +138,16 @@
             this.panel19.Controls.Add(this.btn_book_delete);
             this.panel19.Controls.Add(this.btn_book_update);
             this.panel19.Controls.Add(this.btn_book_add);
-            this.panel19.Location = new System.Drawing.Point(404, 645);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel19.Location = new System.Drawing.Point(269, 419);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(922, 49);
+            this.panel19.Size = new System.Drawing.Size(615, 32);
             this.panel19.TabIndex = 2;
             // 
             // btn_book_delete
             // 
-            this.btn_book_delete.Location = new System.Drawing.Point(484, 6);
-            this.btn_book_delete.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_book_delete.Location = new System.Drawing.Point(323, 4);
             this.btn_book_delete.Name = "btn_book_delete";
-            this.btn_book_delete.Size = new System.Drawing.Size(195, 35);
+            this.btn_book_delete.Size = new System.Drawing.Size(130, 23);
             this.btn_book_delete.TabIndex = 2;
             this.btn_book_delete.Text = "Gỡ sách";
             this.btn_book_delete.UseVisualStyleBackColor = true;
@@ -158,10 +155,9 @@
             // 
             // btn_book_update
             // 
-            this.btn_book_update.Location = new System.Drawing.Point(244, 6);
-            this.btn_book_update.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_book_update.Location = new System.Drawing.Point(163, 4);
             this.btn_book_update.Name = "btn_book_update";
-            this.btn_book_update.Size = new System.Drawing.Size(195, 35);
+            this.btn_book_update.Size = new System.Drawing.Size(130, 23);
             this.btn_book_update.TabIndex = 1;
             this.btn_book_update.Text = "Chỉnh sửa thông tin";
             this.btn_book_update.UseVisualStyleBackColor = true;
@@ -169,10 +165,9 @@
             // 
             // btn_book_add
             // 
-            this.btn_book_add.Location = new System.Drawing.Point(6, 6);
-            this.btn_book_add.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_book_add.Location = new System.Drawing.Point(4, 4);
             this.btn_book_add.Name = "btn_book_add";
-            this.btn_book_add.Size = new System.Drawing.Size(195, 35);
+            this.btn_book_add.Size = new System.Drawing.Size(130, 23);
             this.btn_book_add.TabIndex = 0;
             this.btn_book_add.Text = "Thêm sách";
             this.btn_book_add.UseVisualStyleBackColor = true;
@@ -188,10 +183,9 @@
             this.panel10.Controls.Add(this.panel14);
             this.panel10.Controls.Add(this.panel13);
             this.panel10.Controls.Add(this.panel12);
-            this.panel10.Location = new System.Drawing.Point(404, 11);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel10.Location = new System.Drawing.Point(269, 7);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(922, 623);
+            this.panel10.Size = new System.Drawing.Size(615, 405);
             this.panel10.TabIndex = 1;
             this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
@@ -199,31 +193,28 @@
             // 
             this.panel18.Controls.Add(this.tb_book_overview);
             this.panel18.Controls.Add(this.lb_book_overview);
-            this.panel18.Location = new System.Drawing.Point(6, 414);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel18.Location = new System.Drawing.Point(4, 269);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(912, 205);
+            this.panel18.Size = new System.Drawing.Size(608, 133);
             this.panel18.TabIndex = 3;
             // 
             // tb_book_overview
             // 
-            this.tb_book_overview.Location = new System.Drawing.Point(226, 6);
-            this.tb_book_overview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_book_overview.Location = new System.Drawing.Point(151, 4);
             this.tb_book_overview.Multiline = true;
             this.tb_book_overview.Name = "tb_book_overview";
             this.tb_book_overview.ReadOnly = true;
             this.tb_book_overview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_book_overview.Size = new System.Drawing.Size(679, 192);
+            this.tb_book_overview.Size = new System.Drawing.Size(454, 126);
             this.tb_book_overview.TabIndex = 1;
             // 
             // lb_book_overview
             // 
             this.lb_book_overview.AutoSize = true;
             this.lb_book_overview.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_book_overview.Location = new System.Drawing.Point(6, 6);
-            this.lb_book_overview.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_book_overview.Location = new System.Drawing.Point(4, 4);
             this.lb_book_overview.Name = "lb_book_overview";
-            this.lb_book_overview.Size = new System.Drawing.Size(138, 29);
+            this.lb_book_overview.Size = new System.Drawing.Size(92, 19);
             this.lb_book_overview.TabIndex = 0;
             this.lb_book_overview.Text = "Tổng quan";
             // 
@@ -231,20 +222,18 @@
             // 
             this.panel17.Controls.Add(this.panel22);
             this.panel17.Controls.Add(this.lb_book_pdf);
-            this.panel17.Location = new System.Drawing.Point(6, 315);
-            this.panel17.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel17.Location = new System.Drawing.Point(4, 205);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(615, 83);
+            this.panel17.Size = new System.Drawing.Size(410, 54);
             this.panel17.TabIndex = 2;
             this.panel17.Paint += new System.Windows.Forms.PaintEventHandler(this.panel17_Paint);
             // 
             // panel22
             // 
             this.panel22.Controls.Add(this.ll_book_pdf);
-            this.panel22.Location = new System.Drawing.Point(226, 6);
-            this.panel22.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel22.Location = new System.Drawing.Point(151, 4);
             this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(384, 72);
+            this.panel22.Size = new System.Drawing.Size(256, 47);
             this.panel22.TabIndex = 1;
             this.panel22.Paint += new System.Windows.Forms.PaintEventHandler(this.panel22_Paint);
             // 
@@ -253,9 +242,8 @@
             this.ll_book_pdf.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ll_book_pdf.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.ll_book_pdf.Location = new System.Drawing.Point(0, 0);
-            this.ll_book_pdf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ll_book_pdf.Name = "ll_book_pdf";
-            this.ll_book_pdf.Size = new System.Drawing.Size(384, 72);
+            this.ll_book_pdf.Size = new System.Drawing.Size(256, 47);
             this.ll_book_pdf.TabIndex = 0;
             this.ll_book_pdf.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_book_pdf_LinkClicked);
             // 
@@ -263,29 +251,26 @@
             // 
             this.lb_book_pdf.AutoSize = true;
             this.lb_book_pdf.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_book_pdf.Location = new System.Drawing.Point(6, 6);
-            this.lb_book_pdf.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_book_pdf.Location = new System.Drawing.Point(4, 4);
             this.lb_book_pdf.Name = "lb_book_pdf";
-            this.lb_book_pdf.Size = new System.Drawing.Size(118, 29);
+            this.lb_book_pdf.Size = new System.Drawing.Size(79, 19);
             this.lb_book_pdf.TabIndex = 0;
             this.lb_book_pdf.Text = "PDF Link";
             // 
             // panel11
             // 
             this.panel11.Controls.Add(this.pb_book_cover);
-            this.panel11.Location = new System.Drawing.Point(630, 5);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel11.Location = new System.Drawing.Point(420, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(288, 394);
+            this.panel11.Size = new System.Drawing.Size(192, 256);
             this.panel11.TabIndex = 0;
             // 
             // pb_book_cover
             // 
             this.pb_book_cover.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pb_book_cover.Location = new System.Drawing.Point(0, 0);
-            this.pb_book_cover.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pb_book_cover.Name = "pb_book_cover";
-            this.pb_book_cover.Size = new System.Drawing.Size(288, 394);
+            this.pb_book_cover.Size = new System.Drawing.Size(192, 256);
             this.pb_book_cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_book_cover.TabIndex = 0;
             this.pb_book_cover.TabStop = false;
@@ -295,29 +280,26 @@
             // 
             this.panel16.Controls.Add(this.tb_book_publish);
             this.panel16.Controls.Add(this.label4);
-            this.panel16.Location = new System.Drawing.Point(6, 265);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel16.Location = new System.Drawing.Point(4, 172);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(615, 42);
+            this.panel16.Size = new System.Drawing.Size(410, 27);
             this.panel16.TabIndex = 2;
             // 
             // tb_book_publish
             // 
-            this.tb_book_publish.Location = new System.Drawing.Point(226, 6);
-            this.tb_book_publish.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_book_publish.Location = new System.Drawing.Point(151, 4);
             this.tb_book_publish.Name = "tb_book_publish";
             this.tb_book_publish.ReadOnly = true;
-            this.tb_book_publish.Size = new System.Drawing.Size(382, 26);
+            this.tb_book_publish.Size = new System.Drawing.Size(256, 20);
             this.tb_book_publish.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 6);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(4, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(226, 29);
+            this.label4.Size = new System.Drawing.Size(149, 19);
             this.label4.TabIndex = 0;
             this.label4.Text = "Ngày xuất / tái bản";
             // 
@@ -325,29 +307,27 @@
             // 
             this.panel15.Controls.Add(this.tb_book_category_id);
             this.panel15.Controls.Add(this.lb_book_category_id);
-            this.panel15.Location = new System.Drawing.Point(6, 214);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel15.Location = new System.Drawing.Point(4, 139);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(615, 42);
+            this.panel15.Size = new System.Drawing.Size(410, 27);
             this.panel15.TabIndex = 2;
             // 
             // tb_book_category_id
             // 
-            this.tb_book_category_id.Location = new System.Drawing.Point(226, 6);
-            this.tb_book_category_id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_book_category_id.Location = new System.Drawing.Point(151, 4);
             this.tb_book_category_id.Name = "tb_book_category_id";
             this.tb_book_category_id.ReadOnly = true;
-            this.tb_book_category_id.Size = new System.Drawing.Size(382, 26);
+            this.tb_book_category_id.Size = new System.Drawing.Size(256, 20);
             this.tb_book_category_id.TabIndex = 1;
+            this.tb_book_category_id.TextChanged += new System.EventHandler(this.tb_book_category_id_TextChanged);
             // 
             // lb_book_category_id
             // 
             this.lb_book_category_id.AutoSize = true;
             this.lb_book_category_id.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_book_category_id.Location = new System.Drawing.Point(6, 6);
-            this.lb_book_category_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_book_category_id.Location = new System.Drawing.Point(4, 4);
             this.lb_book_category_id.Name = "lb_book_category_id";
-            this.lb_book_category_id.Size = new System.Drawing.Size(139, 29);
+            this.lb_book_category_id.Size = new System.Drawing.Size(90, 19);
             this.lb_book_category_id.TabIndex = 0;
             this.lb_book_category_id.Text = "Mã thể loại";
             // 
@@ -355,29 +335,26 @@
             // 
             this.panel14.Controls.Add(this.tb_book_author);
             this.panel14.Controls.Add(this.lb_book_author);
-            this.panel14.Location = new System.Drawing.Point(4, 163);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel14.Location = new System.Drawing.Point(3, 106);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(616, 42);
+            this.panel14.Size = new System.Drawing.Size(411, 27);
             this.panel14.TabIndex = 2;
             // 
             // tb_book_author
             // 
-            this.tb_book_author.Location = new System.Drawing.Point(228, 6);
-            this.tb_book_author.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_book_author.Location = new System.Drawing.Point(152, 4);
             this.tb_book_author.Name = "tb_book_author";
             this.tb_book_author.ReadOnly = true;
-            this.tb_book_author.Size = new System.Drawing.Size(382, 26);
+            this.tb_book_author.Size = new System.Drawing.Size(256, 20);
             this.tb_book_author.TabIndex = 1;
             // 
             // lb_book_author
             // 
             this.lb_book_author.AutoSize = true;
             this.lb_book_author.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_book_author.Location = new System.Drawing.Point(6, 6);
-            this.lb_book_author.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_book_author.Location = new System.Drawing.Point(4, 4);
             this.lb_book_author.Name = "lb_book_author";
-            this.lb_book_author.Size = new System.Drawing.Size(96, 29);
+            this.lb_book_author.Size = new System.Drawing.Size(64, 19);
             this.lb_book_author.TabIndex = 0;
             this.lb_book_author.Text = "Tác giả";
             // 
@@ -385,30 +362,27 @@
             // 
             this.panel13.Controls.Add(this.tb_book_title);
             this.panel13.Controls.Add(this.lb_book_title);
-            this.panel13.Location = new System.Drawing.Point(4, 55);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel13.Location = new System.Drawing.Point(3, 36);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(616, 98);
+            this.panel13.Size = new System.Drawing.Size(411, 64);
             this.panel13.TabIndex = 2;
             // 
             // tb_book_title
             // 
-            this.tb_book_title.Location = new System.Drawing.Point(228, 6);
-            this.tb_book_title.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_book_title.Location = new System.Drawing.Point(152, 4);
             this.tb_book_title.Multiline = true;
             this.tb_book_title.Name = "tb_book_title";
             this.tb_book_title.ReadOnly = true;
-            this.tb_book_title.Size = new System.Drawing.Size(382, 86);
+            this.tb_book_title.Size = new System.Drawing.Size(256, 57);
             this.tb_book_title.TabIndex = 1;
             // 
             // lb_book_title
             // 
             this.lb_book_title.AutoSize = true;
             this.lb_book_title.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_book_title.Location = new System.Drawing.Point(6, 6);
-            this.lb_book_title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_book_title.Location = new System.Drawing.Point(4, 4);
             this.lb_book_title.Name = "lb_book_title";
-            this.lb_book_title.Size = new System.Drawing.Size(98, 29);
+            this.lb_book_title.Size = new System.Drawing.Size(65, 19);
             this.lb_book_title.TabIndex = 0;
             this.lb_book_title.Text = "Tiêu đề";
             // 
@@ -416,39 +390,35 @@
             // 
             this.panel12.Controls.Add(this.tb_book_id);
             this.panel12.Controls.Add(this.lb_book_id);
-            this.panel12.Location = new System.Drawing.Point(4, 5);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel12.Location = new System.Drawing.Point(3, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(616, 42);
+            this.panel12.Size = new System.Drawing.Size(411, 27);
             this.panel12.TabIndex = 1;
             // 
             // tb_book_id
             // 
-            this.tb_book_id.Location = new System.Drawing.Point(228, 6);
-            this.tb_book_id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_book_id.Location = new System.Drawing.Point(152, 4);
             this.tb_book_id.Name = "tb_book_id";
             this.tb_book_id.ReadOnly = true;
-            this.tb_book_id.Size = new System.Drawing.Size(382, 26);
+            this.tb_book_id.Size = new System.Drawing.Size(256, 20);
             this.tb_book_id.TabIndex = 1;
             // 
             // lb_book_id
             // 
             this.lb_book_id.AutoSize = true;
             this.lb_book_id.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_book_id.Location = new System.Drawing.Point(6, 6);
-            this.lb_book_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_book_id.Location = new System.Drawing.Point(4, 4);
             this.lb_book_id.Name = "lb_book_id";
-            this.lb_book_id.Size = new System.Drawing.Size(37, 29);
+            this.lb_book_id.Size = new System.Drawing.Size(25, 19);
             this.lb_book_id.TabIndex = 0;
             this.lb_book_id.Text = "ID";
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.lvBook);
-            this.panel9.Location = new System.Drawing.Point(10, 11);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel9.Location = new System.Drawing.Point(7, 7);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(384, 683);
+            this.panel9.Size = new System.Drawing.Size(256, 444);
             this.panel9.TabIndex = 0;
             // 
             // lvBook
@@ -460,10 +430,9 @@
             this.lvBook.FullRowSelect = true;
             this.lvBook.HideSelection = false;
             this.lvBook.Location = new System.Drawing.Point(0, 0);
-            this.lvBook.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lvBook.MultiSelect = false;
             this.lvBook.Name = "lvBook";
-            this.lvBook.Size = new System.Drawing.Size(384, 683);
+            this.lvBook.Size = new System.Drawing.Size(256, 444);
             this.lvBook.TabIndex = 0;
             this.lvBook.UseCompatibleStateImageBehavior = false;
             this.lvBook.View = System.Windows.Forms.View.Details;
@@ -484,11 +453,10 @@
             this.tpAccount.Controls.Add(this.panel20);
             this.tpAccount.Controls.Add(this.panel2);
             this.tpAccount.Controls.Add(this.panel1);
-            this.tpAccount.Location = new System.Drawing.Point(4, 29);
-            this.tpAccount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tpAccount.Location = new System.Drawing.Point(4, 22);
             this.tpAccount.Name = "tpAccount";
-            this.tpAccount.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tpAccount.Size = new System.Drawing.Size(1339, 710);
+            this.tpAccount.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpAccount.Size = new System.Drawing.Size(890, 457);
             this.tpAccount.TabIndex = 0;
             this.tpAccount.Text = "Quản lí tài khoản người dùng";
             this.tpAccount.UseVisualStyleBackColor = true;
@@ -496,30 +464,27 @@
             // panel21
             // 
             this.panel21.Controls.Add(this.lb_user_feadback);
-            this.panel21.Location = new System.Drawing.Point(632, 318);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel21.Location = new System.Drawing.Point(421, 207);
             this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(694, 48);
+            this.panel21.Size = new System.Drawing.Size(463, 31);
             this.panel21.TabIndex = 3;
             // 
             // lb_user_feadback
             // 
             this.lb_user_feadback.AutoSize = true;
             this.lb_user_feadback.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_user_feadback.Location = new System.Drawing.Point(6, 6);
-            this.lb_user_feadback.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_user_feadback.Location = new System.Drawing.Point(4, 4);
             this.lb_user_feadback.Name = "lb_user_feadback";
-            this.lb_user_feadback.Size = new System.Drawing.Size(116, 29);
+            this.lb_user_feadback.Size = new System.Drawing.Size(77, 19);
             this.lb_user_feadback.TabIndex = 0;
             this.lb_user_feadback.Text = "Phản hồi";
             // 
             // panel20
             // 
             this.panel20.Controls.Add(this.flp_user_feedback);
-            this.panel20.Location = new System.Drawing.Point(632, 375);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel20.Location = new System.Drawing.Point(421, 244);
             this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(694, 318);
+            this.panel20.Size = new System.Drawing.Size(463, 207);
             this.panel20.TabIndex = 2;
             // 
             // flp_user_feedback
@@ -527,9 +492,8 @@
             this.flp_user_feedback.AutoScroll = true;
             this.flp_user_feedback.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp_user_feedback.Location = new System.Drawing.Point(0, 0);
-            this.flp_user_feedback.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.flp_user_feedback.Name = "flp_user_feedback";
-            this.flp_user_feedback.Size = new System.Drawing.Size(694, 318);
+            this.flp_user_feedback.Size = new System.Drawing.Size(463, 207);
             this.flp_user_feedback.TabIndex = 1;
             // 
             // panel2
@@ -540,39 +504,35 @@
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Location = new System.Drawing.Point(630, 9);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Location = new System.Drawing.Point(420, 6);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(696, 298);
+            this.panel2.Size = new System.Drawing.Size(464, 194);
             this.panel2.TabIndex = 1;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.tb_user_email);
             this.panel8.Controls.Add(this.lb_user_email);
-            this.panel8.Location = new System.Drawing.Point(6, 251);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel8.Location = new System.Drawing.Point(4, 163);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(686, 42);
+            this.panel8.Size = new System.Drawing.Size(457, 27);
             this.panel8.TabIndex = 2;
             // 
             // tb_user_email
             // 
-            this.tb_user_email.Location = new System.Drawing.Point(250, 6);
-            this.tb_user_email.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_user_email.Location = new System.Drawing.Point(167, 4);
             this.tb_user_email.Name = "tb_user_email";
             this.tb_user_email.ReadOnly = true;
-            this.tb_user_email.Size = new System.Drawing.Size(428, 26);
+            this.tb_user_email.Size = new System.Drawing.Size(287, 20);
             this.tb_user_email.TabIndex = 1;
             // 
             // lb_user_email
             // 
             this.lb_user_email.AutoSize = true;
             this.lb_user_email.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_user_email.Location = new System.Drawing.Point(6, 6);
-            this.lb_user_email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_user_email.Location = new System.Drawing.Point(4, 4);
             this.lb_user_email.Name = "lb_user_email";
-            this.lb_user_email.Size = new System.Drawing.Size(85, 29);
+            this.lb_user_email.Size = new System.Drawing.Size(55, 19);
             this.lb_user_email.TabIndex = 0;
             this.lb_user_email.Text = "E-Mail";
             // 
@@ -580,29 +540,26 @@
             // 
             this.panel7.Controls.Add(this.tb_user_gender);
             this.panel7.Controls.Add(this.lb_user_gender);
-            this.panel7.Location = new System.Drawing.Point(6, 200);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel7.Location = new System.Drawing.Point(4, 130);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(686, 42);
+            this.panel7.Size = new System.Drawing.Size(457, 27);
             this.panel7.TabIndex = 2;
             // 
             // tb_user_gender
             // 
-            this.tb_user_gender.Location = new System.Drawing.Point(250, 6);
-            this.tb_user_gender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_user_gender.Location = new System.Drawing.Point(167, 4);
             this.tb_user_gender.Name = "tb_user_gender";
             this.tb_user_gender.ReadOnly = true;
-            this.tb_user_gender.Size = new System.Drawing.Size(428, 26);
+            this.tb_user_gender.Size = new System.Drawing.Size(287, 20);
             this.tb_user_gender.TabIndex = 1;
             // 
             // lb_user_gender
             // 
             this.lb_user_gender.AutoSize = true;
             this.lb_user_gender.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_user_gender.Location = new System.Drawing.Point(6, 6);
-            this.lb_user_gender.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_user_gender.Location = new System.Drawing.Point(4, 4);
             this.lb_user_gender.Name = "lb_user_gender";
-            this.lb_user_gender.Size = new System.Drawing.Size(115, 29);
+            this.lb_user_gender.Size = new System.Drawing.Size(73, 19);
             this.lb_user_gender.TabIndex = 0;
             this.lb_user_gender.Text = "Giới tính";
             // 
@@ -610,29 +567,26 @@
             // 
             this.panel6.Controls.Add(this.tb_user_dob);
             this.panel6.Controls.Add(this.lb_user_dob);
-            this.panel6.Location = new System.Drawing.Point(6, 149);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel6.Location = new System.Drawing.Point(4, 97);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(686, 42);
+            this.panel6.Size = new System.Drawing.Size(457, 27);
             this.panel6.TabIndex = 2;
             // 
             // tb_user_dob
             // 
-            this.tb_user_dob.Location = new System.Drawing.Point(250, 6);
-            this.tb_user_dob.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_user_dob.Location = new System.Drawing.Point(167, 4);
             this.tb_user_dob.Name = "tb_user_dob";
             this.tb_user_dob.ReadOnly = true;
-            this.tb_user_dob.Size = new System.Drawing.Size(428, 26);
+            this.tb_user_dob.Size = new System.Drawing.Size(287, 20);
             this.tb_user_dob.TabIndex = 1;
             // 
             // lb_user_dob
             // 
             this.lb_user_dob.AutoSize = true;
             this.lb_user_dob.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_user_dob.Location = new System.Drawing.Point(6, 6);
-            this.lb_user_dob.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_user_dob.Location = new System.Drawing.Point(4, 4);
             this.lb_user_dob.Name = "lb_user_dob";
-            this.lb_user_dob.Size = new System.Drawing.Size(128, 29);
+            this.lb_user_dob.Size = new System.Drawing.Size(86, 19);
             this.lb_user_dob.TabIndex = 0;
             this.lb_user_dob.Text = "Ngày sinh";
             // 
@@ -640,29 +594,26 @@
             // 
             this.panel5.Controls.Add(this.tb_user_phone);
             this.panel5.Controls.Add(this.lb_user_phone);
-            this.panel5.Location = new System.Drawing.Point(6, 103);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel5.Location = new System.Drawing.Point(4, 67);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(686, 42);
+            this.panel5.Size = new System.Drawing.Size(457, 27);
             this.panel5.TabIndex = 2;
             // 
             // tb_user_phone
             // 
-            this.tb_user_phone.Location = new System.Drawing.Point(250, 6);
-            this.tb_user_phone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_user_phone.Location = new System.Drawing.Point(167, 4);
             this.tb_user_phone.Name = "tb_user_phone";
             this.tb_user_phone.ReadOnly = true;
-            this.tb_user_phone.Size = new System.Drawing.Size(428, 26);
+            this.tb_user_phone.Size = new System.Drawing.Size(287, 20);
             this.tb_user_phone.TabIndex = 1;
             // 
             // lb_user_phone
             // 
             this.lb_user_phone.AutoSize = true;
             this.lb_user_phone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_user_phone.Location = new System.Drawing.Point(6, 6);
-            this.lb_user_phone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_user_phone.Location = new System.Drawing.Point(4, 4);
             this.lb_user_phone.Name = "lb_user_phone";
-            this.lb_user_phone.Size = new System.Drawing.Size(166, 29);
+            this.lb_user_phone.Size = new System.Drawing.Size(109, 19);
             this.lb_user_phone.TabIndex = 0;
             this.lb_user_phone.Text = "Số điện thoại";
             // 
@@ -670,29 +621,26 @@
             // 
             this.panel4.Controls.Add(this.tb_user_name);
             this.panel4.Controls.Add(this.lb_user_name);
-            this.panel4.Location = new System.Drawing.Point(6, 57);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Location = new System.Drawing.Point(4, 37);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(686, 42);
+            this.panel4.Size = new System.Drawing.Size(457, 27);
             this.panel4.TabIndex = 2;
             // 
             // tb_user_name
             // 
-            this.tb_user_name.Location = new System.Drawing.Point(250, 6);
-            this.tb_user_name.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_user_name.Location = new System.Drawing.Point(167, 4);
             this.tb_user_name.Name = "tb_user_name";
             this.tb_user_name.ReadOnly = true;
-            this.tb_user_name.Size = new System.Drawing.Size(428, 26);
+            this.tb_user_name.Size = new System.Drawing.Size(287, 20);
             this.tb_user_name.TabIndex = 1;
             // 
             // lb_user_name
             // 
             this.lb_user_name.AutoSize = true;
             this.lb_user_name.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_user_name.Location = new System.Drawing.Point(6, 6);
-            this.lb_user_name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_user_name.Location = new System.Drawing.Point(4, 4);
             this.lb_user_name.Name = "lb_user_name";
-            this.lb_user_name.Size = new System.Drawing.Size(186, 29);
+            this.lb_user_name.Size = new System.Drawing.Size(124, 19);
             this.lb_user_name.TabIndex = 0;
             this.lb_user_name.Text = "Tên đăng nhập";
             // 
@@ -700,19 +648,17 @@
             // 
             this.panel3.Controls.Add(this.tb_user_id);
             this.panel3.Controls.Add(this.lb_user_id);
-            this.panel3.Location = new System.Drawing.Point(6, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Location = new System.Drawing.Point(4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(686, 42);
+            this.panel3.Size = new System.Drawing.Size(457, 27);
             this.panel3.TabIndex = 0;
             // 
             // tb_user_id
             // 
-            this.tb_user_id.Location = new System.Drawing.Point(250, 6);
-            this.tb_user_id.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tb_user_id.Location = new System.Drawing.Point(167, 4);
             this.tb_user_id.Name = "tb_user_id";
             this.tb_user_id.ReadOnly = true;
-            this.tb_user_id.Size = new System.Drawing.Size(428, 26);
+            this.tb_user_id.Size = new System.Drawing.Size(287, 20);
             this.tb_user_id.TabIndex = 1;
             this.tb_user_id.TextChanged += new System.EventHandler(this.tb_user_id_TextChanged);
             // 
@@ -720,20 +666,18 @@
             // 
             this.lb_user_id.AutoSize = true;
             this.lb_user_id.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_user_id.Location = new System.Drawing.Point(6, 6);
-            this.lb_user_id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_user_id.Location = new System.Drawing.Point(4, 4);
             this.lb_user_id.Name = "lb_user_id";
-            this.lb_user_id.Size = new System.Drawing.Size(37, 29);
+            this.lb_user_id.Size = new System.Drawing.Size(25, 19);
             this.lb_user_id.TabIndex = 0;
             this.lb_user_id.Text = "ID";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.lvAccount);
-            this.panel1.Location = new System.Drawing.Point(10, 9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Location = new System.Drawing.Point(7, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(610, 685);
+            this.panel1.Size = new System.Drawing.Size(407, 445);
             this.panel1.TabIndex = 0;
             // 
             // lvAccount
@@ -748,10 +692,9 @@
             this.lvAccount.FullRowSelect = true;
             this.lvAccount.HideSelection = false;
             this.lvAccount.Location = new System.Drawing.Point(0, 0);
-            this.lvAccount.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.lvAccount.MultiSelect = false;
             this.lvAccount.Name = "lvAccount";
-            this.lvAccount.Size = new System.Drawing.Size(610, 685);
+            this.lvAccount.Size = new System.Drawing.Size(407, 445);
             this.lvAccount.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.lvAccount.TabIndex = 0;
             this.lvAccount.UseCompatibleStateImageBehavior = false;
@@ -761,39 +704,37 @@
             // TenDangNhap
             // 
             this.TenDangNhap.Text = "Tên Đăng Nhập";
-            this.TenDangNhap.Width = 116;
+            this.TenDangNhap.Width = 125;
             // 
             // MatKhau
             // 
             this.MatKhau.Text = "Mật Khẩu";
-            this.MatKhau.Width = 182;
+            this.MatKhau.Width = 199;
             // 
             // PhanQuyen
             // 
             this.PhanQuyen.Text = "Phân Quyền";
-            this.PhanQuyen.Width = 104;
+            this.PhanQuyen.Width = 201;
             // 
             // tcMangement
             // 
             this.tcMangement.Controls.Add(this.tpAccount);
             this.tcMangement.Controls.Add(this.tpBook);
-            this.tcMangement.Location = new System.Drawing.Point(20, 20);
-            this.tcMangement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tcMangement.Location = new System.Drawing.Point(13, 13);
             this.tcMangement.Name = "tcMangement";
             this.tcMangement.SelectedIndex = 0;
-            this.tcMangement.Size = new System.Drawing.Size(1347, 743);
+            this.tcMangement.Size = new System.Drawing.Size(898, 483);
             this.tcMangement.TabIndex = 0;
             // 
             // fManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1384, 782);
+            this.ClientSize = new System.Drawing.Size(921, 498);
             this.Controls.Add(this.tcMangement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "fManagement";
             this.Text = "Quản lí tài khoản ";
             this.tpBook.ResumeLayout(false);

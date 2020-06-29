@@ -25,6 +25,7 @@ namespace DA_CNPM
             InitializeComponent();
             //LoadAccountListLV();
             BookBLL.Instance.LoadbookList();
+            CategoryBLL.Instance.LoadcateList();
             LoadACCOUNT_lv();
             //List<Book> bookList = BookBLL.Instance.LoadBookList();
             LoadBOOKListDTG();
@@ -237,7 +238,16 @@ namespace DA_CNPM
                         tb_book_id.Text = item.ID_BOOK.ToString();
                         tb_book_title.Text = item.TITLE;
                         tb_book_author.Text = item.AUTHOR;
-                        tb_book_category_id.Text = item.ID_CATEGORY.ToString();
+                        //tb_book_category_id.Text = item.ID_CATEGORY.ToString();
+                        foreach (CATEGORY cate in CategoryBLL.Instance.cateList)
+                        {
+                            if (item.ID_CATEGORY == cate.ID_CATEGORY)
+                            {
+                                tb_book_category_id.Text = cate.CATE_NAME;
+                                break;
+                            }
+                            //else MessageBox.Show("NULL");
+                        }
                         tb_book_publish.Text = item.PUBLISH_YEAR;
                         ll_book_pdf.Text = item.PDF_LINK;
                         ll_book_pdf.LinkArea = new LinkArea(0, item.PDF_LINK.Trim().Length);
@@ -317,6 +327,10 @@ namespace DA_CNPM
         private void tb_user_id_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tb_book_category_id_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }
