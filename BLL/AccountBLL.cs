@@ -57,5 +57,14 @@ namespace DA_CNPM.BLL
                 return false;
             }
         }
+        public void SignUp(ACCOUNT acc)
+        {
+            DataProvider.Instance.Entity_DB.ACCOUNTs.Add(acc);
+            DataProvider.Instance.Entity_DB.SaveChanges();
+        }
+        public bool FindAccount(string username)
+        {
+            return DataProvider.Instance.Entity_DB.ACCOUNTs.Any(p => p.USER_NAME == username);
+        }
     }
 }

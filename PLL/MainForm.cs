@@ -35,7 +35,7 @@ namespace DA_CNPM.PLL
         private void bt_Signin_Click(object sender, EventArgs e)
         {
             fLogin f = new fLogin();
-            //this.Hide();
+            this.Hide();
             f.ShowDialog();
             this.Show();
         }

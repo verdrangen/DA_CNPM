@@ -21,5 +21,10 @@ namespace DA_CNPM.BLL
             var accountdetailList = DataProvider.Instance.Entity_DB.ACCOUNT_DETAIL.Select(p => p).ToList();
             return accountdetailList;
         }
+        public void SignUp(ACCOUNT_DETAIL ad)
+        {
+            DataProvider.Instance.Entity_DB.ACCOUNT_DETAIL.Add(ad);
+            DataProvider.Instance.Entity_DB.SaveChanges();
+        }
     }
 }

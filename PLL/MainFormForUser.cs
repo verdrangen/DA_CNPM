@@ -18,6 +18,13 @@ namespace DA_CNPM
         public MainFormForUser()
         {
             InitializeComponent();
+            LoadRandomBook();
+        }
+        public MainFormForUser(string username)
+        {
+            InitializeComponent();
+            user_toolstrip.Text = username;
+            LoadRandomBook();
         }
 
         private void bt_Search_Click(object sender, EventArgs e)
@@ -37,7 +44,13 @@ namespace DA_CNPM
         }
         public void LoadRandomBook()
         {
+            GroupBox gb = new GroupBox();
+            gb.Text = "CÓ THỂ BẠN QUAN TÂM";
+            gb.Dock = DockStyle.Fill;
+            pn_Main.Controls.Add(gb);
             FlowLayoutPanel flp_P1 = new FlowLayoutPanel();
+            gb.Controls.Add(flp_P1);
+            flp_P1.Dock = DockStyle.Fill;
 
             foreach (BOOK item in BookBLL.Instance.LoadRandomBook())
             {
