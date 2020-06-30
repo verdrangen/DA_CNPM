@@ -1,5 +1,5 @@
 ﻿using DA_CNPM.BLL;
-using DA_CNPM.DAL;
+using DA_CNPM.ENTITY;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

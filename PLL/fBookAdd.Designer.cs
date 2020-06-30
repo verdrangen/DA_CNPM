@@ -44,7 +44,6 @@
             this.tb_book_publish = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.tb_book_category_id = new System.Windows.Forms.TextBox();
             this.lb_book_category_id = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.tb_book_author = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.tb_book_title = new System.Windows.Forms.TextBox();
             this.lb_book_title = new System.Windows.Forms.Label();
+            this.cbb_book_cate = new System.Windows.Forms.ComboBox();
             this.panel19.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -209,19 +209,12 @@
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.tb_book_category_id);
+            this.panel15.Controls.Add(this.cbb_book_cate);
             this.panel15.Controls.Add(this.lb_book_category_id);
             this.panel15.Location = new System.Drawing.Point(4, 106);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(410, 27);
             this.panel15.TabIndex = 2;
-            // 
-            // tb_book_category_id
-            // 
-            this.tb_book_category_id.Location = new System.Drawing.Point(151, 4);
-            this.tb_book_category_id.Name = "tb_book_category_id";
-            this.tb_book_category_id.Size = new System.Drawing.Size(256, 20);
-            this.tb_book_category_id.TabIndex = 1;
             // 
             // lb_book_category_id
             // 
@@ -286,6 +279,15 @@
             this.lb_book_title.TabIndex = 0;
             this.lb_book_title.Text = "Tiêu đề";
             // 
+            // cbb_book_cate
+            // 
+            this.cbb_book_cate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_book_cate.FormattingEnabled = true;
+            this.cbb_book_cate.Location = new System.Drawing.Point(151, 3);
+            this.cbb_book_cate.Name = "cbb_book_cate";
+            this.cbb_book_cate.Size = new System.Drawing.Size(256, 21);
+            this.cbb_book_cate.TabIndex = 1;
+            // 
             // fBookAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,7 +332,6 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.TextBox tb_book_category_id;
         private System.Windows.Forms.Label lb_book_category_id;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.TextBox tb_book_author;
@@ -341,5 +342,6 @@
         private System.Windows.Forms.Button btn_book_cover_select;
         private System.Windows.Forms.TextBox tb_book_pdf;
         private System.Windows.Forms.TextBox tb_book_publish;
+        private System.Windows.Forms.ComboBox cbb_book_cate;
     }
 }

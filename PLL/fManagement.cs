@@ -1,7 +1,5 @@
 ﻿using DA_CNPM.BLL;
-using DA_CNPM.DAL;
-using DA_CNPM.DAL.DTO;
-using DA_CNPM.DAO;
+using DA_CNPM.ENTITY;
 using System;
 using System.Collections;
 using System.Collections.Generic;

@@ -1,29 +1,31 @@
-﻿using DA_CNPM.ENTITY;
+﻿using DA_CNPM.BLL;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DA_CNPM.BLL
+namespace DA_CNPM.DAL
 {
-    class BookBLL
+    class BookDAL
     {
-        private static BookBLL instance;
-        public static BookBLL Instance
+        private static BookDAL instance;
+        public static BookDAL Instance
         {
-            get { if (instance == null) instance = new BookBLL(); return instance; }
+            get { if (instance == null) instance = new BookDAL(); return instance; }
             private set { instance = value; }
         }
-        public List<BOOK> bookList { get; set; }
-        public List<BOOK> LoadbookList()
+        private BookDAL() { }
+        public List<BOOK> LoadBOOKList()
         {
-            bookList = DataProvider.Instance.Entity_DB.BOOKs.Select(p => p).ToList();
+            var bookList = DataProvider.Instance.Entity_DB.BOOKs.Select(p => p).ToList();
             return bookList;
         }
         public List<BOOK> LoadRandomBook()
         {
-            bookList = DataProvider.Instance.Entity_DB.USP_GetRandomBook().ToList();
+            var bookList = DataProvider.Instance.Entity_DB.USP_GetRandomBook().ToList();
             return bookList;
         }
         public void eSaveChanges_Add(BOOK book)
@@ -52,9 +54,8 @@ namespace DA_CNPM.BLL
                 return;
             }
             DataProvider.Instance.Entity_DB.Entry(tmp).CurrentValues.SetValues(book);
-            DataProvider.Instance.Entity_DB.Entry(tmp).State = System.Data.Entity.EntityState.Deleted;
-            DataProvider.Instance.Entity_DB.SaveChanges();
+                DataProvider.Instance.Entity_DB.Entry(tmp).State = System.Data.Entity.EntityState.Deleted;
+                DataProvider.Instance.Entity_DB.SaveChanges();
         }
     }
-
 }

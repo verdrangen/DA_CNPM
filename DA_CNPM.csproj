@@ -57,71 +57,66 @@
   <ItemGroup>
     <Compile Include="BLL\CategoryBLL.cs" />
     <Compile Include="BLL\EntityBLL.cs" />
-    <Compile Include="DAL\ACCOUNT.cs">
+    <Compile Include="ENTITY\ACCOUNT.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\ACCOUNT_DETAIL.cs">
+    <Compile Include="ENTITY\ACCOUNT_DETAIL.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
     <Compile Include="BLL\AccountBLL.cs" />
     <Compile Include="BLL\AccountDetailBLL.cs" />
     <Compile Include="BLL\BookBLL.cs" />
     <Compile Include="BLL\SupportBLL.cs" />
-    <Compile Include="DAL\BOOK.cs">
+    <Compile Include="ENTITY\BOOK.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\BOOKMARK.cs">
+    <Compile Include="ENTITY\BOOKMARK.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\CATEGORY.cs">
+    <Compile Include="ENTITY\CATEGORY.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\BookDAL.cs" />
-    <Compile Include="DAL\CategoryDAL.cs" />
-    <Compile Include="DAL\DTO\Account.cs" />
-    <Compile Include="DAL\AccountDAL.cs" />
-    <Compile Include="DAL\DataProvider.cs" />
-    <Compile Include="DAL\AccountDetailDAL.cs" />
-    <Compile Include="DAL\DTO\Book.cs" />
-    <Compile Include="DAL\DTO\Support.cs" />
-    <Compile Include="DAL\SupportDAL.cs" />
-    <Compile Include="DAL\eDA_CNPM.Context.cs">
+    <Compile Include="ENTITY\eDA_CNPM.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>eDA_CNPM.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\eDA_CNPM.cs">
+    <Compile Include="ENTITY\eDA_CNPM.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\eDA_CNPM.Designer.cs">
+    <Compile Include="ENTITY\eDA_CNPM.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>eDA_CNPM.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DAL\GROUP.cs">
+    <Compile Include="ENTITY\DataProvider.cs" />
+    <Compile Include="ENTITY\GROUP.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_GetAccountByUserName_Result.cs">
+    <Compile Include="ENTITY\USP_GetAccountByUserName_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_GetRandomBook_Result.cs">
+    <Compile Include="ENTITY\USP_GetRandomBook_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_GetReviewList_Result.cs">
+    <Compile Include="ENTITY\USP_GetReviewList_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_GetUserReviewList_Result.cs">
+    <Compile Include="ENTITY\USP_GetUserReviewList_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_SearchBook_Result.cs">
+    <Compile Include="ENTITY\USP_SearchBook1_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="MainFormForUser.cs">
+    <Compile Include="ENTITY\USP_SearchBook_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\MainFormForUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFormForUser.Designer.cs">
+    <Compile Include="PLL\MainFormForUser.Designer.cs">
       <DependentUpon>MainFormForUser.cs</DependentUpon>
     </Compile>
     <Compile Include="PLL\fBookAdd.cs">
@@ -168,41 +163,40 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DAL\DTO\AccountDetail.cs" />
-    <Compile Include="DAL\REVIEW.cs">
+    <Compile Include="ENTITY\REVIEW.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\sp_helpdiagramdefinition_Result.cs">
+    <Compile Include="ENTITY\sp_helpdiagramdefinition_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\sp_helpdiagrams_Result.cs">
+    <Compile Include="ENTITY\sp_helpdiagrams_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\SUPPORT.cs">
+    <Compile Include="ENTITY\SUPPORT.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\sysdiagram.cs">
+    <Compile Include="ENTITY\sysdiagram.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USER_REVIEW.cs">
+    <Compile Include="ENTITY\USER_REVIEW.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_GetAccountDetailList_Result.cs">
+    <Compile Include="ENTITY\USP_GetAccountDetailList_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_GetAccountList_Result.cs">
+    <Compile Include="ENTITY\USP_GetAccountList_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_GetBookList_Result.cs">
+    <Compile Include="ENTITY\USP_GetBookList_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_GetSupportList_Result.cs">
+    <Compile Include="ENTITY\USP_GetSupportList_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\USP_Login_Result.cs">
+    <Compile Include="ENTITY\USP_Login_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="MainFormForUser.resx">
+    <EmbeddedResource Include="PLL\MainFormForUser.resx">
       <DependentUpon>MainFormForUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PLL\fBookAdd.resx">
@@ -236,11 +230,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EntityDeploy Include="DAL\eDA_CNPM.edmx">
+    <EntityDeploy Include="ENTITY\eDA_CNPM.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>eDA_CNPM.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="DAL\eDA_CNPM.edmx.diagram">
+    <None Include="ENTITY\eDA_CNPM.edmx.diagram">
       <DependentUpon>eDA_CNPM.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -258,18 +252,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DateTransferObject.txt.txt" />
-    <Content Include="DAL\eDA_CNPM.Context.tt">
+    <Content Include="ENTITY\eDA_CNPM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>eDA_CNPM.Context.cs</LastGenOutput>
       <DependentUpon>eDA_CNPM.edmx</DependentUpon>
     </Content>
-    <Content Include="DAL\eDA_CNPM.tt">
+    <Content Include="ENTITY\eDA_CNPM.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>eDA_CNPM.edmx</DependentUpon>
       <LastGenOutput>eDA_CNPM.cs</LastGenOutput>
     </Content>
     <Content Include="TextFile1.txt" />
+    <Content Include="USP\USP_GetRandomBook.sql" />
+    <Content Include="USP\USP_Login_User.sql" />
+    <Content Include="USP\USP_SearchBook.sql" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

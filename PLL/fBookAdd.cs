@@ -1,6 +1,5 @@
 ﻿using DA_CNPM.BLL;
-using DA_CNPM.DAL;
-using DA_CNPM.DAL.DTO;
+using DA_CNPM.ENTITY;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +18,7 @@ namespace DA_CNPM
         public fBookAdd()
         {
             InitializeComponent();
+            LoadCATEcbb();
         }
 
         private void btn_book_add_confirm_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace DA_CNPM
             if (MessageBox.Show("Xác nhận thêm sách?", "Thông báo", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
 
-                if (String.IsNullOrEmpty(tb_book_title.Text) || String.IsNullOrEmpty(tb_book_category_id.Text) || String.IsNullOrEmpty(tb_book_author.Text)
+                if (String.IsNullOrEmpty(tb_book_title.Text) || String.IsNullOrEmpty(cbb_book_cate.Text) || String.IsNullOrEmpty(tb_book_author.Text)
                     && String.IsNullOrEmpty(tb_book_publish.Text) || String.IsNullOrEmpty(tb_book_pdf.Text) || String.IsNullOrEmpty(tb_book_overview.Text) || pb_book_cover.Image == null)
                 {
                     MessageBox.Show("Dữ liệu nhập chưa đúng hoặc chưa đầy đủ!");
@@ -34,7 +34,7 @@ namespace DA_CNPM
                 }
                 BOOK booktemp = new BOOK();
                 booktemp.TITLE = tb_book_title.Text;
-                booktemp.ID_CATEGORY = Convert.ToInt32(tb_book_category_id.Text);
+                booktemp.ID_CATEGORY = Convert.ToInt32(cbb_book_cate.Text);
                 booktemp.AUTHOR = tb_book_author.Text;
                 booktemp.PUBLISH_YEAR = tb_book_publish.Text;
                 booktemp.PDF_LINK = tb_book_pdf.Text;
@@ -49,7 +49,16 @@ namespace DA_CNPM
                 //this.Close();
             }
         }
-
+        public void LoadCATEcbb()
+        {
+            /*foreach (CATEGORY item in CategoryBLL.Instance.cateList)
+            {
+                cbb_book_cate.Items.Add(item.ID_CATEGORY);
+            }*/
+            cbb_book_cate.DisplayMember = "CATE_NAME";
+            cbb_book_cate.ValueMember = "ID_CATEGORY";
+            cbb_book_cate.DataSource = CategoryBLL.Instance.cateList;
+        }
         private void btn_book_cover_select_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();

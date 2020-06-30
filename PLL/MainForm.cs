@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DA_CNPM.BLL;
-using DA_CNPM.DAL;
+using DA_CNPM.ENTITY;
 
 namespace DA_CNPM.PLL
 {
@@ -85,7 +85,7 @@ namespace DA_CNPM.PLL
             Panel p1 = new Panel();
             p1.Width = 220;
             p1.Height = 220;
-            p1.Margin = new Padding(10, 0, 10, 0);
+            p1.Margin = new Padding(10, 10, 10, 10);
             p1.BackColor = Color.LightGray;
             p1.Controls.Add(pictureBox);
             //label.Left = (p1.Width - label.Width) / 2;
@@ -110,15 +110,15 @@ namespace DA_CNPM.PLL
             }
         } 
        
-        void RequestLogin(object sender, EventArgs e)
+        public void RequestLogin(object sender, EventArgs e)
         {
             MessageBox.Show("Đăng nhập để được xem chi tiết.");
         }
 
         private void bt_Search_Click(object sender, EventArgs e)
         {
-            
+            RequestLogin(sender, e);
         }
-        
+
     }
 }

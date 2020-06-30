@@ -1,4 +1,4 @@
-﻿using DA_CNPM.DAL;
+﻿using DA_CNPM.ENTITY;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,10 +16,10 @@ namespace DA_CNPM.BLL
             private set { instance = value; }
         }
         public List<CATEGORY> cateList { get; set; }
-        public void LoadcateList()
+        public List<CATEGORY> LoadcateList()
         {
-            //bookList = LoadBOOKList();
-            cateList = CategoryDAL.Instance.LoadCATEList();
+            cateList = DataProvider.Instance.Entity_DB.CATEGORies.Select(p => p).ToList();
+            return cateList;
         }
     }
 }

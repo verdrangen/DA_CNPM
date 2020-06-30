@@ -1,25 +1,27 @@
-﻿using DA_CNPM.ENTITY;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DA_CNPM.BLL
+namespace DA_CNPM.DAL
 {
-    class SupportBLL
+    class SupportDAL
     {
-        private static SupportBLL instance;
-        public static SupportBLL Instance
+        private static SupportDAL instance;
+        public static SupportDAL Instance
         {
-            get { if (instance == null) instance = new SupportBLL(); return instance; }
+            get { if (instance == null) instance = new SupportDAL(); return instance; }
             private set { instance = value; }
         }
-        private SupportBLL() { }
+        private SupportDAL() { }
         public List<SUPPORT> LoadSUPPORTList()
         {
+            //DOAN_CNPMEntities db = new DOAN_CNPMEntities();
             var supportList = DataProvider.Instance.Entity_DB.SUPPORTs.Select(p => p).ToList();
             return supportList;
         }
+
     }
 }

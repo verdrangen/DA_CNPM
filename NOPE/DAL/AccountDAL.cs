@@ -1,28 +1,23 @@
-﻿using DA_CNPM.ENTITY;
+﻿using DA_CNPM.DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DA_CNPM.BLL
+namespace DA_CNPM.DAO
 {
-    class AccountBLL
+    class AccountDAL
     {
-        private static AccountBLL instance;
-        public static AccountBLL Instance
+        private static AccountDAL instance;
+        public static AccountDAL Instance
         {
-            get { if (instance == null) instance = new AccountBLL(); return instance; }
+            get { if (instance == null) instance = new AccountDAL(); return instance; }
             private set { instance = value; }
         }
-        private AccountBLL() { }
-        //public List<ACCOUNT> accountList { get; set; }
-        public List<ACCOUNT> LoadACCOUNTList()
-        {
-            var accountList = DataProvider.Instance.Entity_DB.ACCOUNTs.Select(p => p).ToList();
-            return accountList;
-        }
+        private AccountDAL() { }
         public bool Login_Admin(string username, string password)
         {
             try
@@ -39,9 +34,11 @@ namespace DA_CNPM.BLL
                 MessageBox.Show("Lỗi kết nối đến cơ sở dữ liệu");
                 return false;
             }
+           
         }
         public bool Login_User(string username, string password)
         {
+            DOAN_CNPMEntities db = DataProvider.Instance.Entity_DB;
             try
             {
                 using (var context = new DOAN_CNPMEntities())
@@ -56,6 +53,11 @@ namespace DA_CNPM.BLL
                 MessageBox.Show("Lỗi kết nối đến cơ sở dữ liệu");
                 return false;
             }
+        }
+        public List<ACCOUNT> LoadACCOUNTList()
+        {
+            var accountList = DataProvider.Instance.Entity_DB.ACCOUNTs.Select(p => p).ToList();
+            return accountList;
         }
     }
 }
