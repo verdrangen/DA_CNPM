@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.cb_Category = new System.Windows.Forms.ComboBox();
             this.bt_Search = new System.Windows.Forms.Button();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.lb_SachOnline = new System.Windows.Forms.Label();
@@ -38,37 +36,19 @@
             this.llb_Intro = new System.Windows.Forms.LinkLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.user_toolstrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sáchĐãLưuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolstrip_user_info = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolstrip_user_bookmark = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolstrip_user_support = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(713, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Category";
-            // 
-            // cb_Category
-            // 
-            this.cb_Category.FormattingEnabled = true;
-            this.cb_Category.Location = new System.Drawing.Point(564, 14);
-            this.cb_Category.Name = "cb_Category";
-            this.cb_Category.Size = new System.Drawing.Size(143, 21);
-            this.cb_Category.TabIndex = 3;
             // 
             // bt_Search
             // 
             this.bt_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bt_Search.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.bt_Search.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bt_Search.Location = new System.Drawing.Point(456, 10);
+            this.bt_Search.Location = new System.Drawing.Point(579, 13);
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(75, 27);
             this.bt_Search.TabIndex = 2;
@@ -78,11 +58,11 @@
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(204, 10);
-            this.tb_Search.Multiline = true;
+            this.tb_Search.Location = new System.Drawing.Point(327, 16);
             this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(246, 27);
+            this.tb_Search.Size = new System.Drawing.Size(246, 20);
             this.tb_Search.TabIndex = 1;
+            this.tb_Search.TextChanged += new System.EventHandler(this.tb_Search_TextChanged);
             // 
             // lb_SachOnline
             // 
@@ -98,10 +78,11 @@
             // 
             // pn_Main
             // 
-            this.pn_Main.Location = new System.Drawing.Point(0, 62);
+            this.pn_Main.AutoScroll = true;
+            this.pn_Main.Location = new System.Drawing.Point(0, 51);
             this.pn_Main.Margin = new System.Windows.Forms.Padding(2);
             this.pn_Main.Name = "pn_Main";
-            this.pn_Main.Size = new System.Drawing.Size(995, 511);
+            this.pn_Main.Size = new System.Drawing.Size(995, 522);
             this.pn_Main.TabIndex = 3;
             // 
             // panel4
@@ -123,6 +104,7 @@
             this.llb_Intro.TabIndex = 0;
             this.llb_Intro.TabStop = true;
             this.llb_Intro.Text = "Introduction";
+            this.llb_Intro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_Intro_LinkClicked);
             // 
             // menuStrip1
             // 
@@ -142,24 +124,31 @@
             this.user_toolstrip.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.user_toolstrip.CheckOnClick = true;
             this.user_toolstrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thôngTinTàiKhoảnToolStripMenuItem,
-            this.sáchĐãLưuToolStripMenuItem});
+            this.toolstrip_user_info,
+            this.toolstrip_user_bookmark,
+            this.toolstrip_user_support});
             this.user_toolstrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_toolstrip.Name = "user_toolstrip";
             this.user_toolstrip.Size = new System.Drawing.Size(63, 47);
             this.user_toolstrip.Text = "Cá nhân";
             // 
-            // thôngTinTàiKhoảnToolStripMenuItem
+            // toolstrip_user_info
             // 
-            this.thôngTinTàiKhoảnToolStripMenuItem.Name = "thôngTinTàiKhoảnToolStripMenuItem";
-            this.thôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản";
+            this.toolstrip_user_info.Name = "toolstrip_user_info";
+            this.toolstrip_user_info.Size = new System.Drawing.Size(177, 22);
+            this.toolstrip_user_info.Text = "Thông tin tài khoản";
             // 
-            // sáchĐãLưuToolStripMenuItem
+            // toolstrip_user_bookmark
             // 
-            this.sáchĐãLưuToolStripMenuItem.Name = "sáchĐãLưuToolStripMenuItem";
-            this.sáchĐãLưuToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.sáchĐãLưuToolStripMenuItem.Text = "Sách đã lưu";
+            this.toolstrip_user_bookmark.Name = "toolstrip_user_bookmark";
+            this.toolstrip_user_bookmark.Size = new System.Drawing.Size(177, 22);
+            this.toolstrip_user_bookmark.Text = "Sách đã lưu";
+            // 
+            // toolstrip_user_support
+            // 
+            this.toolstrip_user_support.Name = "toolstrip_user_support";
+            this.toolstrip_user_support.Size = new System.Drawing.Size(177, 22);
+            this.toolstrip_user_support.Text = "Báo cáo vấn đề";
             // 
             // MainFormForUser
             // 
@@ -167,9 +156,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 622);
             this.Controls.Add(this.tb_Search);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_SachOnline);
-            this.Controls.Add(this.cb_Category);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.bt_Search);
             this.Controls.Add(this.pn_Main);
@@ -190,8 +177,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cb_Category;
         private System.Windows.Forms.Button bt_Search;
         private System.Windows.Forms.TextBox tb_Search;
         private System.Windows.Forms.Label lb_SachOnline;
@@ -200,7 +185,8 @@
         private System.Windows.Forms.LinkLabel llb_Intro;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem user_toolstrip;
-        private System.Windows.Forms.ToolStripMenuItem thôngTinTàiKhoảnToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sáchĐãLưuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolstrip_user_info;
+        private System.Windows.Forms.ToolStripMenuItem toolstrip_user_bookmark;
+        private System.Windows.Forms.ToolStripMenuItem toolstrip_user_support;
     }
 }

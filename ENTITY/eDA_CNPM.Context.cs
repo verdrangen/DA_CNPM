@@ -385,22 +385,31 @@ namespace DA_CNPM.ENTITY
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("USP_UPDATE_USER", id_userParameter, user_nameParameter, phonenumberParameter, dobParameter, genderParameter, emailParameter);
         }
     
-        public virtual int USP_SearchBook(string title)
+        public virtual ObjectResult<BOOK> USP_SearchBook(string title)
         {
             var titleParameter = title != null ?
                 new ObjectParameter("title", title) :
                 new ObjectParameter("title", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("USP_SearchBook", titleParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BOOK>("USP_SearchBook", titleParameter);
         }
     
-        public virtual ObjectResult<USP_SearchBook1_Result> USP_SearchBook1(string title)
+        public virtual ObjectResult<BOOK> USP_SearchBook(string title, MergeOption mergeOption)
         {
             var titleParameter = title != null ?
                 new ObjectParameter("title", title) :
                 new ObjectParameter("title", typeof(string));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<USP_SearchBook1_Result>("USP_SearchBook1", titleParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<BOOK>("USP_SearchBook", mergeOption, titleParameter);
+        }
+    
+        public virtual ObjectResult<string> fuConvertToUnsign1(string title)
+        {
+            var titleParameter = title != null ?
+                new ObjectParameter("title", title) :
+                new ObjectParameter("title", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("fuConvertToUnsign1", titleParameter);
         }
     }
 }

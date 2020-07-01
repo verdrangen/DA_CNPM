@@ -156,7 +156,7 @@
             this.panel14.Location = new System.Drawing.Point(3, 106);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(411, 27);
-            this.panel14.TabIndex = 2;
+            this.panel14.TabIndex = 3;
             // 
             // lb_book_category_id
             // 
@@ -175,7 +175,7 @@
             this.panel15.Location = new System.Drawing.Point(4, 139);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(410, 27);
-            this.panel15.TabIndex = 2;
+            this.panel15.TabIndex = 4;
             // 
             // cbb_book_cate
             // 
@@ -230,7 +230,7 @@
             this.panel16.Location = new System.Drawing.Point(4, 172);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(410, 27);
-            this.panel16.TabIndex = 2;
+            this.panel16.TabIndex = 5;
             // 
             // rtb_book_pdf
             // 
@@ -259,7 +259,7 @@
             this.panel17.Location = new System.Drawing.Point(4, 205);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(410, 54);
-            this.panel17.TabIndex = 2;
+            this.panel17.TabIndex = 6;
             // 
             // tb_book_overview
             // 
@@ -287,7 +287,7 @@
             this.panel18.Location = new System.Drawing.Point(4, 269);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(608, 135);
-            this.panel18.TabIndex = 3;
+            this.panel18.TabIndex = 7;
             // 
             // panel10
             // 
@@ -320,7 +320,7 @@
             this.panel19.Location = new System.Drawing.Point(457, 428);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(171, 32);
-            this.panel19.TabIndex = 6;
+            this.panel19.TabIndex = 9;
             // 
             // fBookEdit
             // 

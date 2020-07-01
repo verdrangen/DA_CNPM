@@ -205,6 +205,9 @@
           </ReferentialConstraint>
         </Association>
         <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="fuConvertToUnsign1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+          <Parameter Name="strInput" Type="nvarchar" Mode="In" />
+        </Function>
         <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
           <Parameter Name="owner_id" Type="int" Mode="In" />
@@ -393,10 +396,7 @@
             <Parameter Name="gender" Mode="In" Type="String" />
             <Parameter Name="email" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="USP_SearchBook">
-          <Parameter Name="title" Mode="In" Type="String" />
-          </FunctionImport>
-          <FunctionImport Name="USP_SearchBook1" ReturnType="Collection(DOAN_CNPMModel.USP_SearchBook1_Result)">
+          <FunctionImport Name="USP_SearchBook" EntitySet="BOOKs" ReturnType="Collection(DOAN_CNPMModel.BOOK)">
           <Parameter Name="title" Mode="In" Type="String" />
           </FunctionImport>
           <EntitySet Name="ACCOUNTs" EntityType="DOAN_CNPMModel.ACCOUNT" />
@@ -445,7 +445,10 @@
             <End Role="REVIEW" EntitySet="REVIEWs" />
             <End Role="USER_REVIEW" EntitySet="USER_REVIEW" />
           </AssociationSet>
-        </EntityContainer>
+          <FunctionImport Name="fuConvertToUnsign1" ReturnType="Collection(String)">
+            <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
+          </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
           <Property Type="Binary" Name="definition" Nullable="true" />
@@ -754,7 +757,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -795,20 +798,6 @@
           <FunctionImportMapping FunctionImportName="USP_Login" FunctionName="DOAN_CNPMModel.Store.USP_Login">
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="USP_GetRandomBook" FunctionName="DOAN_CNPMModel.Store.USP_GetRandomBook" />
-          <FunctionImportMapping FunctionImportName="USP_SearchBook1" FunctionName="DOAN_CNPMModel.Store.USP_SearchBook">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="DOAN_CNPMModel.USP_SearchBook1_Result">
-                <ScalarProperty Name="ID_BOOK" ColumnName="ID_BOOK" />
-                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
-                <ScalarProperty Name="AUTHOR" ColumnName="AUTHOR" />
-                <ScalarProperty Name="ID_CATEGORY" ColumnName="ID_CATEGORY" />
-                <ScalarProperty Name="PUBLISH_YEAR" ColumnName="PUBLISH_YEAR" />
-                <ScalarProperty Name="PDF_LINK" ColumnName="PDF_LINK" />
-                <ScalarProperty Name="OVERVIEW" ColumnName="OVERVIEW" />
-                <ScalarProperty Name="COVER" ColumnName="COVER" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="USP_SearchBook" FunctionName="DOAN_CNPMModel.Store.USP_SearchBook" />
           <EntitySetMapping Name="ACCOUNTs">
             <EntityTypeMapping TypeName="DOAN_CNPMModel.ACCOUNT">
@@ -909,6 +898,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="fuConvertToUnsign1" FunctionName="DOAN_CNPMModel.Store.USP_SearchBook" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

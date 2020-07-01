@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DA_CNPM.BLL;
 using DA_CNPM.ENTITY;
+using DA_CNPM.PLL;
 
 namespace DA_CNPM
 {
@@ -24,21 +25,28 @@ namespace DA_CNPM
         {
             InitializeComponent();
             user_toolstrip.Text = username;
+            CategoryBLL.Instance.LoadcateList();
             LoadRandomBook();
         }
 
         private void bt_Search_Click(object sender, EventArgs e)
         {
-          
-           /*String title = tb_Search.Text;
-           List <BOOK> bookList = BookBLL.Instance.SearchBook(title);
-           pn_Main.Controls.Clear();
+
+            string str = tb_Search.Text.Trim();
+            List<BOOK> bookList = BookBLL.Instance.SearchBook(str);
+            pn_Main.Controls.Clear();
+            if (!bookList.Any())
+            {
+                MessageBox.Show("Không có kết quả!");
+                return;
+            }
             FlowLayoutPanel flp_P1 = new FlowLayoutPanel();
+            flp_P1.Dock = DockStyle.Fill;
             pn_Main.Controls.Add(flp_P1);
             foreach (BOOK item in bookList)
             {
                 flp_P1.Controls.Add(GenPanel(item));
-            }*/
+            }
 
 
         }
@@ -82,12 +90,14 @@ namespace DA_CNPM
             Panel p1 = new Panel();
             p1.Width = 220;
             p1.Height = 220;
-            p1.Margin = new Padding(10, 0, 10, 0);
+            p1.Margin = new Padding(10, 15, 10, 15);
             p1.BackColor = Color.LightGray;
             p1.Controls.Add(pictureBox);
             //label.Left = (p1.Width - label.Width) / 2;
             p1.Controls.Add(label);
             p1.Visible = true;
+            pictureBox.Click += delegate (object sender ,EventArgs e) { CheckBook(sender, e, book); };
+            label.Click += delegate (object sender, EventArgs e) { CheckBook(sender, e, book); };
             return p1;
         }
         //public void LoadSearchBook(List<BOOK> bookList)
@@ -97,5 +107,21 @@ namespace DA_CNPM
         //        this.Controls.Add(GenPanel(item));
         //    }
         //}
+        void CheckBook(object sender, EventArgs e, BOOK book)
+        {
+            fBookDetail f = new fBookDetail(book);
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void llb_Intro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            String str = "SachOnline là một dịch vụ miễn phí cho phép người sử dụng tìm kiếm, đọc,hay tải về những quyển sách yêu thích mà không phải tốn quá nhiều thời gian cho việc đến thư viện hay nhà sách. SachOnline - Tủ sách của mọi người";
+            MessageBox.Show(str, "Giới thiệu");
+        }
+
+        private void tb_Search_TextChanged(object sender, EventArgs e)
+        {
+        }
     }
 }

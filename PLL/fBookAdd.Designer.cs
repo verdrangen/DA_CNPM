@@ -44,6 +44,7 @@
             this.tb_book_publish = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.cbb_book_cate = new System.Windows.Forms.ComboBox();
             this.lb_book_category_id = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.tb_book_author = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.panel13 = new System.Windows.Forms.Panel();
             this.tb_book_title = new System.Windows.Forms.TextBox();
             this.lb_book_title = new System.Windows.Forms.Label();
-            this.cbb_book_cate = new System.Windows.Forms.ComboBox();
             this.panel19.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel18.SuspendLayout();
@@ -70,14 +70,14 @@
             this.panel19.Location = new System.Drawing.Point(502, 428);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(126, 32);
-            this.panel19.TabIndex = 4;
+            this.panel19.TabIndex = 7;
             // 
             // btn_book_add_confirm
             // 
             this.btn_book_add_confirm.Location = new System.Drawing.Point(3, 5);
             this.btn_book_add_confirm.Name = "btn_book_add_confirm";
             this.btn_book_add_confirm.Size = new System.Drawing.Size(120, 23);
-            this.btn_book_add_confirm.TabIndex = 0;
+            this.btn_book_add_confirm.TabIndex = 7;
             this.btn_book_add_confirm.Text = "Xác nhận thêm sách";
             this.btn_book_add_confirm.UseVisualStyleBackColor = true;
             this.btn_book_add_confirm.Click += new System.EventHandler(this.btn_book_add_confirm_Click);
@@ -94,7 +94,7 @@
             this.panel10.Location = new System.Drawing.Point(12, 12);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(616, 407);
-            this.panel10.TabIndex = 3;
+            this.panel10.TabIndex = 0;
             // 
             // panel18
             // 
@@ -103,7 +103,7 @@
             this.panel18.Location = new System.Drawing.Point(4, 269);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(608, 135);
-            this.panel18.TabIndex = 3;
+            this.panel18.TabIndex = 5;
             // 
             // tb_book_overview
             // 
@@ -112,7 +112,7 @@
             this.tb_book_overview.Name = "tb_book_overview";
             this.tb_book_overview.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tb_book_overview.Size = new System.Drawing.Size(454, 126);
-            this.tb_book_overview.TabIndex = 1;
+            this.tb_book_overview.TabIndex = 5;
             // 
             // lb_book_overview
             // 
@@ -121,7 +121,7 @@
             this.lb_book_overview.Location = new System.Drawing.Point(4, 4);
             this.lb_book_overview.Name = "lb_book_overview";
             this.lb_book_overview.Size = new System.Drawing.Size(92, 19);
-            this.lb_book_overview.TabIndex = 0;
+            this.lb_book_overview.TabIndex = 5;
             this.lb_book_overview.Text = "Tổng quan";
             // 
             // panel17
@@ -131,7 +131,7 @@
             this.panel17.Location = new System.Drawing.Point(4, 205);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(410, 54);
-            this.panel17.TabIndex = 2;
+            this.panel17.TabIndex = 4;
             // 
             // tb_book_pdf
             // 
@@ -139,7 +139,7 @@
             this.tb_book_pdf.Multiline = true;
             this.tb_book_pdf.Name = "tb_book_pdf";
             this.tb_book_pdf.Size = new System.Drawing.Size(256, 47);
-            this.tb_book_pdf.TabIndex = 1;
+            this.tb_book_pdf.TabIndex = 4;
             // 
             // lb_book_pdf
             // 
@@ -148,7 +148,7 @@
             this.lb_book_pdf.Location = new System.Drawing.Point(4, 4);
             this.lb_book_pdf.Name = "lb_book_pdf";
             this.lb_book_pdf.Size = new System.Drawing.Size(79, 19);
-            this.lb_book_pdf.TabIndex = 0;
+            this.lb_book_pdf.TabIndex = 4;
             this.lb_book_pdf.Text = "PDF Link";
             // 
             // panel11
@@ -165,7 +165,7 @@
             this.btn_book_cover_select.Location = new System.Drawing.Point(58, 230);
             this.btn_book_cover_select.Name = "btn_book_cover_select";
             this.btn_book_cover_select.Size = new System.Drawing.Size(87, 23);
-            this.btn_book_cover_select.TabIndex = 1;
+            this.btn_book_cover_select.TabIndex = 6;
             this.btn_book_cover_select.Text = "Chọn ảnh";
             this.btn_book_cover_select.UseVisualStyleBackColor = true;
             this.btn_book_cover_select.Click += new System.EventHandler(this.btn_book_cover_select_Click);
@@ -187,7 +187,7 @@
             this.panel16.Location = new System.Drawing.Point(4, 139);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(410, 27);
-            this.panel16.TabIndex = 2;
+            this.panel16.TabIndex = 3;
             // 
             // tb_book_publish
             // 
@@ -195,7 +195,7 @@
             this.tb_book_publish.Multiline = true;
             this.tb_book_publish.Name = "tb_book_publish";
             this.tb_book_publish.Size = new System.Drawing.Size(256, 20);
-            this.tb_book_publish.TabIndex = 1;
+            this.tb_book_publish.TabIndex = 3;
             // 
             // label4
             // 
@@ -204,7 +204,7 @@
             this.label4.Location = new System.Drawing.Point(4, 4);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 19);
-            this.label4.TabIndex = 0;
+            this.label4.TabIndex = 3;
             this.label4.Text = "Ngày xuất / tái bản";
             // 
             // panel15
@@ -216,6 +216,15 @@
             this.panel15.Size = new System.Drawing.Size(410, 27);
             this.panel15.TabIndex = 2;
             // 
+            // cbb_book_cate
+            // 
+            this.cbb_book_cate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbb_book_cate.FormattingEnabled = true;
+            this.cbb_book_cate.Location = new System.Drawing.Point(151, 3);
+            this.cbb_book_cate.Name = "cbb_book_cate";
+            this.cbb_book_cate.Size = new System.Drawing.Size(256, 21);
+            this.cbb_book_cate.TabIndex = 2;
+            // 
             // lb_book_category_id
             // 
             this.lb_book_category_id.AutoSize = true;
@@ -223,7 +232,7 @@
             this.lb_book_category_id.Location = new System.Drawing.Point(4, 4);
             this.lb_book_category_id.Name = "lb_book_category_id";
             this.lb_book_category_id.Size = new System.Drawing.Size(90, 19);
-            this.lb_book_category_id.TabIndex = 0;
+            this.lb_book_category_id.TabIndex = 2;
             this.lb_book_category_id.Text = "Mã thể loại";
             // 
             // panel14
@@ -233,7 +242,7 @@
             this.panel14.Location = new System.Drawing.Point(4, 73);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(411, 27);
-            this.panel14.TabIndex = 2;
+            this.panel14.TabIndex = 1;
             // 
             // tb_book_author
             // 
@@ -249,7 +258,7 @@
             this.lb_book_author.Location = new System.Drawing.Point(4, 4);
             this.lb_book_author.Name = "lb_book_author";
             this.lb_book_author.Size = new System.Drawing.Size(64, 19);
-            this.lb_book_author.TabIndex = 0;
+            this.lb_book_author.TabIndex = 1;
             this.lb_book_author.Text = "Tác giả";
             // 
             // panel13
@@ -259,7 +268,7 @@
             this.panel13.Location = new System.Drawing.Point(3, 3);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(411, 64);
-            this.panel13.TabIndex = 2;
+            this.panel13.TabIndex = 0;
             // 
             // tb_book_title
             // 
@@ -267,7 +276,7 @@
             this.tb_book_title.Multiline = true;
             this.tb_book_title.Name = "tb_book_title";
             this.tb_book_title.Size = new System.Drawing.Size(256, 57);
-            this.tb_book_title.TabIndex = 1;
+            this.tb_book_title.TabIndex = 0;
             // 
             // lb_book_title
             // 
@@ -278,15 +287,6 @@
             this.lb_book_title.Size = new System.Drawing.Size(65, 19);
             this.lb_book_title.TabIndex = 0;
             this.lb_book_title.Text = "Tiêu đề";
-            // 
-            // cbb_book_cate
-            // 
-            this.cbb_book_cate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbb_book_cate.FormattingEnabled = true;
-            this.cbb_book_cate.Location = new System.Drawing.Point(151, 3);
-            this.cbb_book_cate.Name = "cbb_book_cate";
-            this.cbb_book_cate.Size = new System.Drawing.Size(256, 21);
-            this.cbb_book_cate.TabIndex = 1;
             // 
             // fBookAdd
             // 

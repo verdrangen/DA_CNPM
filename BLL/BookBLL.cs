@@ -1,6 +1,7 @@
 ﻿using DA_CNPM.ENTITY;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,8 +24,8 @@ namespace DA_CNPM.BLL
         }
         public List<BOOK> LoadRandomBook()
         {
-            bookList = DataProvider.Instance.Entity_DB.USP_GetRandomBook().ToList();
-            return bookList;
+            var randomList = DataProvider.Instance.Entity_DB.USP_GetRandomBook().ToList();
+            return randomList;
         }
         public void eSaveChanges_Add(BOOK book)
         {
@@ -54,6 +55,12 @@ namespace DA_CNPM.BLL
             DataProvider.Instance.Entity_DB.Entry(tmp).CurrentValues.SetValues(book);
             DataProvider.Instance.Entity_DB.Entry(tmp).State = System.Data.Entity.EntityState.Deleted;
             DataProvider.Instance.Entity_DB.SaveChanges();
+        }
+        public List<BOOK> SearchBook(string str)
+        {
+            //return DataProvider.Instance.Entity_DB.USP_SearchBook(str).ToList();
+             return DataProvider.Instance.Entity_DB.BOOKs.SqlQuery("select * from dbo.BOOK where dbo.fuConvertToUnsign1(TITLE) LIKE  N'%' + dbo.fuConvertToUnsign1(@title) +'%'",
+                 new SqlParameter("@title", str)).ToList();
         }
     }
 

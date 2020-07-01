@@ -120,5 +120,10 @@ namespace DA_CNPM.PLL
             RequestLogin(sender, e);
         }
 
+        private void llb_Intro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            String str = "SachOnline là một dịch vụ miễn phí cho phép người sử dụng tìm kiếm, đọc,hay tải về những quyển sách yêu thích mà không phải tốn quá nhiều thời gian cho việc đến thư viện hay nhà sách. SachOnline - Tủ sách của mọi người";
+            MessageBox.Show(str, "Giới thiệu");
+        }
     }
 }

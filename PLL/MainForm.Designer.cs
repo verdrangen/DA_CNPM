@@ -31,8 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.bt_SignUp = new System.Windows.Forms.Button();
             this.bt_SignIn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cb_Category = new System.Windows.Forms.ComboBox();
             this.bt_Search = new System.Windows.Forms.Button();
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.lb_SachOnline = new System.Windows.Forms.Label();
@@ -51,8 +49,6 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.bt_SignUp);
             this.panel1.Controls.Add(this.bt_SignIn);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cb_Category);
             this.panel1.Controls.Add(this.bt_Search);
             this.panel1.Controls.Add(this.tb_Search);
             this.panel1.Controls.Add(this.lb_SachOnline);
@@ -83,31 +79,12 @@
             this.bt_SignIn.UseVisualStyleBackColor = false;
             this.bt_SignIn.Click += new System.EventHandler(this.bt_Signin_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(708, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Category";
-            // 
-            // cb_Category
-            // 
-            this.cb_Category.FormattingEnabled = true;
-            this.cb_Category.Location = new System.Drawing.Point(559, 8);
-            this.cb_Category.Name = "cb_Category";
-            this.cb_Category.Size = new System.Drawing.Size(143, 21);
-            this.cb_Category.TabIndex = 3;
-            this.cb_Category.SelectedIndexChanged += new System.EventHandler(this.cb_TheLoai_SelectedIndexChanged);
-            // 
             // bt_Search
             // 
             this.bt_Search.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.bt_Search.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.bt_Search.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.bt_Search.Location = new System.Drawing.Point(478, 5);
+            this.bt_Search.Location = new System.Drawing.Point(607, 5);
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(75, 27);
             this.bt_Search.TabIndex = 2;
@@ -117,10 +94,9 @@
             // 
             // tb_Search
             // 
-            this.tb_Search.Location = new System.Drawing.Point(226, 5);
-            this.tb_Search.Multiline = true;
+            this.tb_Search.Location = new System.Drawing.Point(355, 9);
             this.tb_Search.Name = "tb_Search";
-            this.tb_Search.Size = new System.Drawing.Size(246, 27);
+            this.tb_Search.Size = new System.Drawing.Size(246, 20);
             this.tb_Search.TabIndex = 1;
             this.tb_Search.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -139,9 +115,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel4.Controls.Add(this.llb_Intro);
-            this.panel4.Location = new System.Drawing.Point(13, 562);
+            this.panel4.Location = new System.Drawing.Point(2, 562);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(978, 39);
+            this.panel4.Size = new System.Drawing.Size(989, 39);
             this.panel4.TabIndex = 4;
             // 
             // llb_Intro
@@ -154,15 +130,16 @@
             this.llb_Intro.TabIndex = 0;
             this.llb_Intro.TabStop = true;
             this.llb_Intro.Text = "Introduction";
+            this.llb_Intro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_Intro_LinkClicked);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.flp_P1);
-            this.groupBox1.Location = new System.Drawing.Point(8, 57);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(4, 57);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(983, 498);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(985, 498);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CÓ THỂ BẠN QUAN TÂM";
@@ -172,9 +149,9 @@
             this.flp_P1.BackColor = System.Drawing.SystemColors.Control;
             this.flp_P1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flp_P1.Location = new System.Drawing.Point(2, 15);
-            this.flp_P1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flp_P1.Margin = new System.Windows.Forms.Padding(2);
             this.flp_P1.Name = "flp_P1";
-            this.flp_P1.Size = new System.Drawing.Size(979, 481);
+            this.flp_P1.Size = new System.Drawing.Size(981, 481);
             this.flp_P1.TabIndex = 0;
             // 
             // panel2
@@ -195,7 +172,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -216,8 +193,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button bt_SignUp;
         private System.Windows.Forms.Button bt_SignIn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cb_Category;
         private System.Windows.Forms.Button bt_Search;
         private System.Windows.Forms.TextBox tb_Search;
         private System.Windows.Forms.Label lb_SachOnline;
