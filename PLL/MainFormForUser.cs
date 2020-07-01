@@ -31,7 +31,7 @@ namespace DA_CNPM
 
         private void bt_Search_Click(object sender, EventArgs e)
         {
-
+            if (String.IsNullOrEmpty(tb_Search.Text)) return;
             string str = tb_Search.Text.Trim();
             List<BOOK> bookList = BookBLL.Instance.SearchBook(str);
             pn_Main.Controls.Clear();
