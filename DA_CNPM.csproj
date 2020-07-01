@@ -55,8 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BookmarkBLL.cs" />
     <Compile Include="BLL\CategoryBLL.cs" />
     <Compile Include="BLL\EntityBLL.cs" />
+    <Compile Include="BLL\ReviewBLL.cs" />
+    <Compile Include="BLL\UserReviewBLL.cs" />
     <Compile Include="ENTITY\ACCOUNT.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
@@ -112,6 +115,18 @@
     </Compile>
     <Compile Include="ENTITY\USP_SearchBook_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\fAccountInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\fAccountInfo.Designer.cs">
+      <DependentUpon>fAccountInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\fSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\fSupport.Designer.cs">
+      <DependentUpon>fSupport.cs</DependentUpon>
     </Compile>
     <Compile Include="PLL\MainFormForUser.cs">
       <SubType>Form</SubType>
@@ -196,6 +211,12 @@
     <Compile Include="ENTITY\USP_Login_Result.cs">
       <DependentUpon>eDA_CNPM.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PLL\fAccountInfo.resx">
+      <DependentUpon>fAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\fSupport.resx">
+      <DependentUpon>fSupport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PLL\MainFormForUser.resx">
       <DependentUpon>MainFormForUser.cs</DependentUpon>
     </EmbeddedResource>

@@ -43,7 +43,7 @@
           </Key>
           <Property Name="ID_BOOKMARK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_BOOK" Type="int" />
-          <Property Name="ID_ACCOUNT" Type="nchar" MaxLength="10" />
+          <Property Name="ID_ACCOUNT" Type="int" />
         </EntityType>
         <EntityType Name="CATEGORY">
           <Key>
@@ -118,24 +118,24 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_BOOKMARK_ACCOUNT_DETAIL">
+          <End Role="ACCOUNT_DETAIL" Type="Self.ACCOUNT_DETAIL" Multiplicity="0..1" />
+          <End Role="BOOKMARK" Type="Self.BOOKMARK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ACCOUNT_DETAIL">
+              <PropertyRef Name="ID_ACCOUNT" />
+            </Principal>
+            <Dependent Role="BOOKMARK">
+              <PropertyRef Name="ID_ACCOUNT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_BOOKMARK_BOOK">
           <End Role="BOOK" Type="Self.BOOK" Multiplicity="0..1" />
           <End Role="BOOKMARK" Type="Self.BOOKMARK" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="BOOK">
               <PropertyRef Name="ID_BOOK" />
-            </Principal>
-            <Dependent Role="BOOKMARK">
-              <PropertyRef Name="ID_BOOK" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_BOOKMARK_USER">
-          <End Role="ACCOUNT_DETAIL" Type="Self.ACCOUNT_DETAIL" Multiplicity="0..1" />
-          <End Role="BOOKMARK" Type="Self.BOOKMARK" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="ACCOUNT_DETAIL">
-              <PropertyRef Name="ID_ACCOUNT" />
             </Principal>
             <Dependent Role="BOOKMARK">
               <PropertyRef Name="ID_BOOK" />
@@ -270,12 +270,12 @@
             <End Role="CATEGORY" EntitySet="CATEGORY" />
             <End Role="BOOK" EntitySet="BOOK" />
           </AssociationSet>
-          <AssociationSet Name="FK_BOOKMARK_BOOK" Association="Self.FK_BOOKMARK_BOOK">
-            <End Role="BOOK" EntitySet="BOOK" />
+          <AssociationSet Name="FK_BOOKMARK_ACCOUNT_DETAIL" Association="Self.FK_BOOKMARK_ACCOUNT_DETAIL">
+            <End Role="ACCOUNT_DETAIL" EntitySet="ACCOUNT_DETAIL" />
             <End Role="BOOKMARK" EntitySet="BOOKMARK" />
           </AssociationSet>
-          <AssociationSet Name="FK_BOOKMARK_USER" Association="Self.FK_BOOKMARK_USER">
-            <End Role="ACCOUNT_DETAIL" EntitySet="ACCOUNT_DETAIL" />
+          <AssociationSet Name="FK_BOOKMARK_BOOK" Association="Self.FK_BOOKMARK_BOOK">
+            <End Role="BOOK" EntitySet="BOOK" />
             <End Role="BOOKMARK" EntitySet="BOOKMARK" />
           </AssociationSet>
           <AssociationSet Name="FK_REVIEW_BOOK" Association="Self.FK_REVIEW_BOOK">
@@ -399,6 +399,9 @@
           <FunctionImport Name="USP_SearchBook" EntitySet="BOOKs" ReturnType="Collection(DOAN_CNPMModel.BOOK)">
           <Parameter Name="title" Mode="In" Type="String" />
           </FunctionImport>
+          <FunctionImport Name="fuConvertToUnsign1" ReturnType="Collection(String)">
+          <Parameter Name="title" Mode="In" Type="String" />
+          </FunctionImport>
           <EntitySet Name="ACCOUNTs" EntityType="DOAN_CNPMModel.ACCOUNT" />
           <EntitySet Name="ACCOUNT_DETAIL" EntityType="DOAN_CNPMModel.ACCOUNT_DETAIL" />
           <EntitySet Name="BOOKs" EntityType="DOAN_CNPMModel.BOOK" />
@@ -417,7 +420,7 @@
             <End Role="ACCOUNT" EntitySet="ACCOUNTs" />
             <End Role="ACCOUNT_DETAIL" EntitySet="ACCOUNT_DETAIL" />
           </AssociationSet>
-          <AssociationSet Name="FK_BOOKMARK_USER" Association="DOAN_CNPMModel.FK_BOOKMARK_USER">
+          <AssociationSet Name="FK_BOOKMARK_ACCOUNT_DETAIL" Association="DOAN_CNPMModel.FK_BOOKMARK_ACCOUNT_DETAIL">
             <End Role="ACCOUNT_DETAIL" EntitySet="ACCOUNT_DETAIL" />
             <End Role="BOOKMARK" EntitySet="BOOKMARKs" />
           </AssociationSet>
@@ -445,9 +448,6 @@
             <End Role="REVIEW" EntitySet="REVIEWs" />
             <End Role="USER_REVIEW" EntitySet="USER_REVIEW" />
           </AssociationSet>
-          <FunctionImport Name="fuConvertToUnsign1" ReturnType="Collection(String)">
-            <Parameter Name="title" Mode="In" Type="String" />
-          </FunctionImport>
           </EntityContainer>
         <ComplexType Name="sp_helpdiagramdefinition_Result">
           <Property Type="Int32" Name="version" Nullable="true" />
@@ -561,7 +561,7 @@
           <Property Name="GENDER" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="EMAIL" Type="String" MaxLength="30" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="ACCOUNT" Relationship="DOAN_CNPMModel.FK_USER_ACCOUNT" FromRole="ACCOUNT_DETAIL" ToRole="ACCOUNT" />
-          <NavigationProperty Name="BOOKMARKs" Relationship="DOAN_CNPMModel.FK_BOOKMARK_USER" FromRole="ACCOUNT_DETAIL" ToRole="BOOKMARK" />
+          <NavigationProperty Name="BOOKMARKs" Relationship="DOAN_CNPMModel.FK_BOOKMARK_ACCOUNT_DETAIL" FromRole="ACCOUNT_DETAIL" ToRole="BOOKMARK" />
           <NavigationProperty Name="SUPPORTs" Relationship="DOAN_CNPMModel.FK_SUPPORT_USER" FromRole="ACCOUNT_DETAIL" ToRole="SUPPORT" />
           <NavigationProperty Name="USER_REVIEW" Relationship="DOAN_CNPMModel.FK_USER_REVIEW_USER" FromRole="ACCOUNT_DETAIL" ToRole="USER_REVIEW" />
         </EntityType>
@@ -587,8 +587,8 @@
           </Key>
           <Property Name="ID_BOOKMARK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_BOOK" Type="Int32" />
-          <Property Name="ID_ACCOUNT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <NavigationProperty Name="ACCOUNT_DETAIL" Relationship="DOAN_CNPMModel.FK_BOOKMARK_USER" FromRole="BOOKMARK" ToRole="ACCOUNT_DETAIL" />
+          <Property Name="ID_ACCOUNT" Type="Int32" />
+          <NavigationProperty Name="ACCOUNT_DETAIL" Relationship="DOAN_CNPMModel.FK_BOOKMARK_ACCOUNT_DETAIL" FromRole="BOOKMARK" ToRole="ACCOUNT_DETAIL" />
           <NavigationProperty Name="BOOK" Relationship="DOAN_CNPMModel.FK_BOOKMARK_BOOK" FromRole="BOOKMARK" ToRole="BOOK" />
         </EntityType>
         <EntityType Name="CATEGORY">
@@ -671,7 +671,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_BOOKMARK_USER">
+        <Association Name="FK_BOOKMARK_ACCOUNT_DETAIL">
           <End Type="DOAN_CNPMModel.ACCOUNT_DETAIL" Role="ACCOUNT_DETAIL" Multiplicity="0..1" />
           <End Type="DOAN_CNPMModel.BOOKMARK" Role="BOOKMARK" Multiplicity="*" />
           <ReferentialConstraint>
@@ -679,7 +679,7 @@
               <PropertyRef Name="ID_ACCOUNT" />
             </Principal>
             <Dependent Role="BOOKMARK">
-              <PropertyRef Name="ID_BOOK" />
+              <PropertyRef Name="ID_ACCOUNT" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -799,6 +799,7 @@
           </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="USP_GetRandomBook" FunctionName="DOAN_CNPMModel.Store.USP_GetRandomBook" />
           <FunctionImportMapping FunctionImportName="USP_SearchBook" FunctionName="DOAN_CNPMModel.Store.USP_SearchBook" />
+          <FunctionImportMapping FunctionImportName="fuConvertToUnsign1" FunctionName="DOAN_CNPMModel.Store.USP_SearchBook" />
           <EntitySetMapping Name="ACCOUNTs">
             <EntityTypeMapping TypeName="DOAN_CNPMModel.ACCOUNT">
               <MappingFragment StoreEntitySet="ACCOUNT">
@@ -898,7 +899,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="fuConvertToUnsign1" FunctionName="DOAN_CNPMModel.Store.USP_SearchBook" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

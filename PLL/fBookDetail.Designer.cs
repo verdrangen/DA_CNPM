@@ -44,7 +44,6 @@
             this.rtb_book_pdf = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.flp_book_review = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_book_cover)).BeginInit();
             this.pn_LinkPDF.SuspendLayout();
@@ -53,18 +52,19 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.pb_book_cover);
-            this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(11, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(345, 353);
+            this.panel1.Size = new System.Drawing.Size(345, 563);
             this.panel1.TabIndex = 0;
             // 
             // pb_book_cover
             // 
-            this.pb_book_cover.Location = new System.Drawing.Point(2, 2);
-            this.pb_book_cover.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pb_book_cover.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pb_book_cover.Location = new System.Drawing.Point(0, 0);
+            this.pb_book_cover.Margin = new System.Windows.Forms.Padding(2);
             this.pb_book_cover.Name = "pb_book_cover";
-            this.pb_book_cover.Size = new System.Drawing.Size(340, 349);
+            this.pb_book_cover.Size = new System.Drawing.Size(345, 563);
             this.pb_book_cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_book_cover.TabIndex = 1;
             this.pb_book_cover.TabStop = false;
@@ -72,17 +72,18 @@
             // tb_TieuDe
             // 
             this.tb_TieuDe.Location = new System.Drawing.Point(518, 12);
-            this.tb_TieuDe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_TieuDe.Margin = new System.Windows.Forms.Padding(2);
             this.tb_TieuDe.Multiline = true;
             this.tb_TieuDe.Name = "tb_TieuDe";
             this.tb_TieuDe.ReadOnly = true;
+            this.tb_TieuDe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tb_TieuDe.Size = new System.Drawing.Size(364, 32);
             this.tb_TieuDe.TabIndex = 1;
             // 
             // tb_TacGia
             // 
             this.tb_TacGia.Location = new System.Drawing.Point(518, 62);
-            this.tb_TacGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_TacGia.Margin = new System.Windows.Forms.Padding(2);
             this.tb_TacGia.Multiline = true;
             this.tb_TacGia.Name = "tb_TacGia";
             this.tb_TacGia.ReadOnly = true;
@@ -92,7 +93,7 @@
             // tb_NXB
             // 
             this.tb_NXB.Location = new System.Drawing.Point(518, 151);
-            this.tb_NXB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_NXB.Margin = new System.Windows.Forms.Padding(2);
             this.tb_NXB.Multiline = true;
             this.tb_NXB.Name = "tb_NXB";
             this.tb_NXB.ReadOnly = true;
@@ -102,7 +103,7 @@
             // tb_TheLoai
             // 
             this.tb_TheLoai.Location = new System.Drawing.Point(518, 107);
-            this.tb_TheLoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_TheLoai.Margin = new System.Windows.Forms.Padding(2);
             this.tb_TheLoai.Multiline = true;
             this.tb_TheLoai.Name = "tb_TheLoai";
             this.tb_TheLoai.ReadOnly = true;
@@ -112,11 +113,12 @@
             // tb_TongQuan
             // 
             this.tb_TongQuan.Location = new System.Drawing.Point(518, 271);
-            this.tb_TongQuan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_TongQuan.Margin = new System.Windows.Forms.Padding(2);
             this.tb_TongQuan.Multiline = true;
             this.tb_TongQuan.Name = "tb_TongQuan";
             this.tb_TongQuan.ReadOnly = true;
-            this.tb_TongQuan.Size = new System.Drawing.Size(364, 234);
+            this.tb_TongQuan.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tb_TongQuan.Size = new System.Drawing.Size(364, 302);
             this.tb_TongQuan.TabIndex = 7;
             // 
             // label1
@@ -167,8 +169,8 @@
             // 
             this.pn_LinkPDF.Controls.Add(this.rtb_book_pdf);
             this.pn_LinkPDF.Controls.Add(this.label5);
-            this.pn_LinkPDF.Location = new System.Drawing.Point(372, 185);
-            this.pn_LinkPDF.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pn_LinkPDF.Location = new System.Drawing.Point(372, 186);
+            this.pn_LinkPDF.Margin = new System.Windows.Forms.Padding(2);
             this.pn_LinkPDF.Name = "pn_LinkPDF";
             this.pn_LinkPDF.Size = new System.Drawing.Size(510, 81);
             this.pn_LinkPDF.TabIndex = 12;
@@ -206,13 +208,6 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Mô tả";
             // 
-            // flp_book_review
-            // 
-            this.flp_book_review.Location = new System.Drawing.Point(9, 369);
-            this.flp_book_review.Name = "flp_book_review";
-            this.flp_book_review.Size = new System.Drawing.Size(345, 203);
-            this.flp_book_review.TabIndex = 14;
-            // 
             // fBookDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,7 +215,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(893, 584);
-            this.Controls.Add(this.flp_book_review);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.pn_LinkPDF);
             this.Controls.Add(this.label4);
@@ -233,9 +227,11 @@
             this.Controls.Add(this.tb_TacGia);
             this.Controls.Add(this.tb_TieuDe);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "fBookDetail";
-            this.Text = "fBookDetail";
+            this.Text = "Thông tin sách/tài liệu";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_book_cover)).EndInit();
             this.pn_LinkPDF.ResumeLayout(false);
@@ -263,6 +259,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RichTextBox rtb_book_pdf;
-        private System.Windows.Forms.FlowLayoutPanel flp_book_review;
     }
 }

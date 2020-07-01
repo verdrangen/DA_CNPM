@@ -64,7 +64,7 @@
             this.bt_SignUp.Name = "bt_SignUp";
             this.bt_SignUp.Size = new System.Drawing.Size(75, 26);
             this.bt_SignUp.TabIndex = 6;
-            this.bt_SignUp.Text = "Sign up";
+            this.bt_SignUp.Text = "Đăng kí";
             this.bt_SignUp.UseVisualStyleBackColor = false;
             this.bt_SignUp.Click += new System.EventHandler(this.bt_SignUp_Click);
             // 
@@ -75,7 +75,7 @@
             this.bt_SignIn.Name = "bt_SignIn";
             this.bt_SignIn.Size = new System.Drawing.Size(75, 26);
             this.bt_SignIn.TabIndex = 5;
-            this.bt_SignIn.Text = "Sign in";
+            this.bt_SignIn.Text = "Đăng nhập";
             this.bt_SignIn.UseVisualStyleBackColor = false;
             this.bt_SignIn.Click += new System.EventHandler(this.bt_Signin_Click);
             // 
@@ -88,7 +88,7 @@
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(75, 27);
             this.bt_Search.TabIndex = 2;
-            this.bt_Search.Text = "Search";
+            this.bt_Search.Text = "Tìm kiếm";
             this.bt_Search.UseVisualStyleBackColor = false;
             this.bt_Search.Click += new System.EventHandler(this.bt_Search_Click);
             // 
@@ -176,7 +176,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainForm";
+            this.Text = "SachOnline";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);

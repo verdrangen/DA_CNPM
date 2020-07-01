@@ -62,6 +62,10 @@ namespace DA_CNPM.BLL
              return DataProvider.Instance.Entity_DB.BOOKs.SqlQuery("select * from dbo.BOOK where dbo.fuConvertToUnsign1(TITLE) LIKE  N'%' + dbo.fuConvertToUnsign1(@title) +'%'",
                  new SqlParameter("@title", str)).ToList();
         }
+        public BOOK FindBook(int id)
+        {
+            return DataProvider.Instance.Entity_DB.BOOKs.Where(p => p.ID_BOOK == id).FirstOrDefault();
+        }
     }
 
 }

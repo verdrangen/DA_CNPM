@@ -30,7 +30,7 @@ namespace DA_CNPM.ENTITY
         public virtual DbSet<ACCOUNT> ACCOUNTs { get; set; }
         public virtual DbSet<ACCOUNT_DETAIL> ACCOUNT_DETAIL { get; set; }
         public virtual DbSet<BOOK> BOOKs { get; set; }
-        public virtual DbSet<BOOKMARK> BOOKMARKs { get; set; }
+        public virtual DbSet<BOOKMARK> BOOKMARK { get; set; }
         public virtual DbSet<CATEGORY> CATEGORies { get; set; }
         public virtual DbSet<GROUP> GROUPs { get; set; }
         public virtual DbSet<REVIEW> REVIEWs { get; set; }

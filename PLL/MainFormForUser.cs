@@ -52,6 +52,7 @@ namespace DA_CNPM
         }
         public void LoadRandomBook()
         {
+            pn_Main.Controls.Clear();
             GroupBox gb = new GroupBox();
             gb.Text = "CÓ THỂ BẠN QUAN TÂM";
             gb.Dock = DockStyle.Fill;
@@ -109,7 +110,7 @@ namespace DA_CNPM
         //}
         void CheckBook(object sender, EventArgs e, BOOK book)
         {
-            fBookDetail f = new fBookDetail(book);
+            fBookDetail f = new fBookDetail(book, user_toolstrip.Text);
             f.ShowDialog();
             this.Show();
         }
@@ -122,6 +123,42 @@ namespace DA_CNPM
 
         private void tb_Search_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void toolstrip_user_info_Click(object sender, EventArgs e)
+        {
+            fAccountInfo f = new fAccountInfo(user_toolstrip.Text);
+            f.ShowDialog();
+            this.Show();
+        }
+
+        /*private void toolstrip_user_bookmark_Click(object sender, EventArgs e)
+        {
+            pn_Main.Controls.Clear();
+            GroupBox gb = new GroupBox();
+            gb.Text = "ĐÃ LƯU";
+            gb.Dock = DockStyle.Fill;
+            pn_Main.Controls.Add(gb);
+            FlowLayoutPanel flp_P1 = new FlowLayoutPanel();
+            gb.Controls.Add(flp_P1);
+            flp_P1.Dock = DockStyle.Fill;
+
+            foreach (int item in BookmarkBLL.Instance.LoadBookmark(AccountDetailBLL.Instance.FindAccount(user_toolstrip.Text).ID_ACCOUNT))
+            {
+                flp_P1.Controls.Add(GenPanel(BookBLL.Instance.FindBook(item)));
+            }
+        }*/
+
+        private void toolstrip_user_home_Click(object sender, EventArgs e)
+        {
+            LoadRandomBook();
+        }
+
+        private void toolstrip_user_support_Click(object sender, EventArgs e)
+        {
+            fSupport f = new fSupport(user_toolstrip.Text);
+            f.ShowDialog();
+            this.Show();
         }
     }
 }

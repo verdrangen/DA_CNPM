@@ -161,7 +161,7 @@ namespace DA_CNPM
                         tb_user_id.Text = item.ID_ACCOUNT.ToString();
                         tb_user_name.Text = item.USER_NAME;
                         tb_user_phone.Text = item.PHONENUMBER;
-                        tb_user_dob.Text = item.D_O_B.ToString();
+                        tb_user_dob.Text = item.D_O_B.Value.ToString("dd/MM/yyyy");
                         tb_user_gender.Text = item.GENDER;
                         tb_user_email.Text = item.EMAIL;
                         foreach (SUPPORT support in SupportBLL.Instance.LoadSUPPORTList())
@@ -169,6 +169,7 @@ namespace DA_CNPM
                             if (support.ID_ACCOUNT == item.ID_ACCOUNT)
                             {
                                 TextBox tb_sp = new TextBox();
+                                tb_sp.ReadOnly = true;
                                 //tb_sp.Size = new System.Drawing.Size(Width = 200, Height = 100); // loi Form?
                                 tb_sp.Width = 400;
                                 tb_sp.Height = 50;

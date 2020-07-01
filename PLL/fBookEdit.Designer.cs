@@ -248,9 +248,9 @@
             this.lb_book_pdf.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_book_pdf.Location = new System.Drawing.Point(4, 4);
             this.lb_book_pdf.Name = "lb_book_pdf";
-            this.lb_book_pdf.Size = new System.Drawing.Size(79, 19);
+            this.lb_book_pdf.Size = new System.Drawing.Size(136, 19);
             this.lb_book_pdf.TabIndex = 0;
-            this.lb_book_pdf.Text = "PDF Link";
+            this.lb_book_pdf.Text = "Link sách/tài liệu";
             // 
             // panel17
             // 
@@ -329,8 +329,10 @@
             this.ClientSize = new System.Drawing.Size(642, 475);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel19);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "fBookEdit";
-            this.Text = "fBookEdit";
+            this.Text = "Chỉnh sửa thông tin sách/tài liệu";
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel13.ResumeLayout(false);

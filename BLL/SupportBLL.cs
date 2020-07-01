@@ -21,5 +21,10 @@ namespace DA_CNPM.BLL
             var supportList = DataProvider.Instance.Entity_DB.SUPPORTs.Select(p => p).ToList();
             return supportList;
         }
+        public void eSaveChanges_Add(SUPPORT sp)
+        {
+            DataProvider.Instance.Entity_DB.SUPPORTs.Add(sp);
+            DataProvider.Instance.Entity_DB.SaveChanges();
+        }
     }
 }

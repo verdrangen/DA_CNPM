@@ -16,7 +16,7 @@ namespace DA_CNPM.ENTITY
     {
         public int ID_BOOKMARK { get; set; }
         public Nullable<int> ID_BOOK { get; set; }
-        public string ID_ACCOUNT { get; set; }
+        public Nullable<int> ID_ACCOUNT { get; set; }
     
         public virtual ACCOUNT_DETAIL ACCOUNT_DETAIL { get; set; }
         public virtual BOOK BOOK { get; set; }

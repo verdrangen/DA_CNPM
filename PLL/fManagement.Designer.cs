@@ -127,7 +127,7 @@
             this.tpBook.Controls.Add(this.panel9);
             this.tpBook.Location = new System.Drawing.Point(4, 22);
             this.tpBook.Name = "tpBook";
-            this.tpBook.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpBook.Padding = new System.Windows.Forms.Padding(3);
             this.tpBook.Size = new System.Drawing.Size(890, 457);
             this.tpBook.TabIndex = 1;
             this.tpBook.Text = "Quản lí sách";
@@ -253,9 +253,9 @@
             this.lb_book_pdf.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_book_pdf.Location = new System.Drawing.Point(4, 4);
             this.lb_book_pdf.Name = "lb_book_pdf";
-            this.lb_book_pdf.Size = new System.Drawing.Size(79, 19);
+            this.lb_book_pdf.Size = new System.Drawing.Size(136, 19);
             this.lb_book_pdf.TabIndex = 0;
-            this.lb_book_pdf.Text = "PDF Link";
+            this.lb_book_pdf.Text = "Link sách/tài liệu";
             // 
             // panel11
             // 
@@ -271,7 +271,7 @@
             this.pb_book_cover.Location = new System.Drawing.Point(0, 0);
             this.pb_book_cover.Name = "pb_book_cover";
             this.pb_book_cover.Size = new System.Drawing.Size(192, 256);
-            this.pb_book_cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_book_cover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pb_book_cover.TabIndex = 0;
             this.pb_book_cover.TabStop = false;
             this.pb_book_cover.Click += new System.EventHandler(this.pb_book_cover_Click);
@@ -455,7 +455,7 @@
             this.tpAccount.Controls.Add(this.panel1);
             this.tpAccount.Location = new System.Drawing.Point(4, 22);
             this.tpAccount.Name = "tpAccount";
-            this.tpAccount.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpAccount.Padding = new System.Windows.Forms.Padding(3);
             this.tpAccount.Size = new System.Drawing.Size(890, 457);
             this.tpAccount.TabIndex = 0;
             this.tpAccount.Text = "Quản lí tài khoản người dùng";
@@ -735,6 +735,7 @@
             this.ClientSize = new System.Drawing.Size(921, 498);
             this.Controls.Add(this.tcMangement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "fManagement";
             this.Text = "Quản lí tài khoản ";
             this.tpBook.ResumeLayout(false);

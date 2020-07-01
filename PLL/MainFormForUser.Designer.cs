@@ -36,8 +36,8 @@
             this.llb_Intro = new System.Windows.Forms.LinkLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.user_toolstrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolstrip_user_home = new System.Windows.Forms.ToolStripMenuItem();
             this.toolstrip_user_info = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolstrip_user_bookmark = new System.Windows.Forms.ToolStripMenuItem();
             this.toolstrip_user_support = new System.Windows.Forms.ToolStripMenuItem();
             this.panel4.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -52,7 +52,7 @@
             this.bt_Search.Name = "bt_Search";
             this.bt_Search.Size = new System.Drawing.Size(75, 27);
             this.bt_Search.TabIndex = 2;
-            this.bt_Search.Text = "Search";
+            this.bt_Search.Text = "Tìm kiếm";
             this.bt_Search.UseVisualStyleBackColor = false;
             this.bt_Search.Click += new System.EventHandler(this.bt_Search_Click);
             // 
@@ -100,10 +100,10 @@
             this.llb_Intro.Font = new System.Drawing.Font("Calibri", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.llb_Intro.Location = new System.Drawing.Point(22, 9);
             this.llb_Intro.Name = "llb_Intro";
-            this.llb_Intro.Size = new System.Drawing.Size(89, 19);
+            this.llb_Intro.Size = new System.Drawing.Size(75, 19);
             this.llb_Intro.TabIndex = 0;
             this.llb_Intro.TabStop = true;
-            this.llb_Intro.Text = "Introduction";
+            this.llb_Intro.Text = "Giới thiệu";
             this.llb_Intro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llb_Intro_LinkClicked);
             // 
             // menuStrip1
@@ -124,34 +124,38 @@
             this.user_toolstrip.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.user_toolstrip.CheckOnClick = true;
             this.user_toolstrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolstrip_user_home,
             this.toolstrip_user_info,
-            this.toolstrip_user_bookmark,
             this.toolstrip_user_support});
             this.user_toolstrip.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user_toolstrip.Name = "user_toolstrip";
             this.user_toolstrip.Size = new System.Drawing.Size(63, 47);
             this.user_toolstrip.Text = "Cá nhân";
             // 
+            // toolstrip_user_home
+            // 
+            this.toolstrip_user_home.Name = "toolstrip_user_home";
+            this.toolstrip_user_home.Size = new System.Drawing.Size(180, 22);
+            this.toolstrip_user_home.Text = "Trang chủ";
+            this.toolstrip_user_home.Click += new System.EventHandler(this.toolstrip_user_home_Click);
+            // 
             // toolstrip_user_info
             // 
             this.toolstrip_user_info.Name = "toolstrip_user_info";
-            this.toolstrip_user_info.Size = new System.Drawing.Size(177, 22);
+            this.toolstrip_user_info.Size = new System.Drawing.Size(180, 22);
             this.toolstrip_user_info.Text = "Thông tin tài khoản";
-            // 
-            // toolstrip_user_bookmark
-            // 
-            this.toolstrip_user_bookmark.Name = "toolstrip_user_bookmark";
-            this.toolstrip_user_bookmark.Size = new System.Drawing.Size(177, 22);
-            this.toolstrip_user_bookmark.Text = "Sách đã lưu";
+            this.toolstrip_user_info.Click += new System.EventHandler(this.toolstrip_user_info_Click);
             // 
             // toolstrip_user_support
             // 
             this.toolstrip_user_support.Name = "toolstrip_user_support";
-            this.toolstrip_user_support.Size = new System.Drawing.Size(177, 22);
+            this.toolstrip_user_support.Size = new System.Drawing.Size(180, 22);
             this.toolstrip_user_support.Text = "Báo cáo vấn đề";
+            this.toolstrip_user_support.Click += new System.EventHandler(this.toolstrip_user_support_Click);
             // 
             // MainFormForUser
             // 
+            this.AcceptButton = this.bt_Search;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(995, 622);
@@ -166,7 +170,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "MainFormForUser";
-            this.Text = "MainFormForUser";
+            this.Text = "SachOnline";
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -186,7 +190,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem user_toolstrip;
         private System.Windows.Forms.ToolStripMenuItem toolstrip_user_info;
-        private System.Windows.Forms.ToolStripMenuItem toolstrip_user_bookmark;
         private System.Windows.Forms.ToolStripMenuItem toolstrip_user_support;
+        private System.Windows.Forms.ToolStripMenuItem toolstrip_user_home;
     }
 }

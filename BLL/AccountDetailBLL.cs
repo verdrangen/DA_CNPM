@@ -26,5 +26,10 @@ namespace DA_CNPM.BLL
             DataProvider.Instance.Entity_DB.ACCOUNT_DETAIL.Add(ad);
             DataProvider.Instance.Entity_DB.SaveChanges();
         }
+        public ACCOUNT_DETAIL FindAccount(string username)
+        {
+            var ad = DataProvider.Instance.Entity_DB.ACCOUNT_DETAIL.Where(p => p.USER_NAME == username).FirstOrDefault();
+            return ad;
+        }
     }
 }

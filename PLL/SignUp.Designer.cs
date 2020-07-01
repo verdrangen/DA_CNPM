@@ -93,6 +93,7 @@
             this.tb_rePw.Name = "tb_rePw";
             this.tb_rePw.Size = new System.Drawing.Size(156, 20);
             this.tb_rePw.TabIndex = 22;
+            this.tb_rePw.UseSystemPasswordChar = true;
             // 
             // lb_Password
             // 
@@ -120,6 +121,7 @@
             this.tb_Pass.Name = "tb_Pass";
             this.tb_Pass.Size = new System.Drawing.Size(156, 20);
             this.tb_Pass.TabIndex = 19;
+            this.tb_Pass.UseSystemPasswordChar = true;
             // 
             // tb_UserName
             // 
@@ -229,9 +231,11 @@
             this.Controls.Add(this.tb_Pass);
             this.Controls.Add(this.tb_UserName);
             this.Controls.Add(this.lb_SachOnline);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "SignUp";
-            this.Text = "SignUp";
+            this.Text = "Đăng kí tài khoản";
             this.ResumeLayout(false);
             this.PerformLayout();
 

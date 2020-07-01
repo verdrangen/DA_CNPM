@@ -20,11 +20,10 @@ namespace DA_CNPM.PLL
             InitializeComponent();
             //CategoryBLL.Instance.LoadcateList();
         }
-
-        public fBookDetail(BOOK book)
+        public fBookDetail(BOOK book, string username)
         {
             InitializeComponent();
-            tb_TieuDe.Text = book.TITLE;
+            tb_TieuDe.Text = book.TITLE.Trim();
             tb_TacGia.Text = book.AUTHOR;
             foreach (CATEGORY cate in CategoryBLL.Instance.cateList)
             {
