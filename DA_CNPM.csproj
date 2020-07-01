@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8169955E-3758-4E77-8245-D95935B909EB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DA_CNPM</RootNamespace>
+    <AssemblyName>DA_CNPM</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\CategoryBLL.cs" />
+    <Compile Include="BLL\EntityBLL.cs" />
+    <Compile Include="ENTITY\ACCOUNT.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\ACCOUNT_DETAIL.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BLL\AccountBLL.cs" />
+    <Compile Include="BLL\AccountDetailBLL.cs" />
+    <Compile Include="BLL\BookBLL.cs" />
+    <Compile Include="BLL\SupportBLL.cs" />
+    <Compile Include="ENTITY\BOOK.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\BOOKMARK.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\CATEGORY.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\eDA_CNPM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eDA_CNPM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\eDA_CNPM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\eDA_CNPM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>eDA_CNPM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\DataProvider.cs" />
+    <Compile Include="ENTITY\GROUP.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_GetAccountByUserName_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_GetRandomBook_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_GetReviewList_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_GetUserReviewList_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_SearchBook1_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_SearchBook_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\MainFormForUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\MainFormForUser.Designer.cs">
+      <DependentUpon>MainFormForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\fBookAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\fBookAdd.Designer.cs">
+      <DependentUpon>fBookAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\fBookDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\fBookDetail.Designer.cs">
+      <DependentUpon>fBookDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\fBookEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\fBookEdit.Designer.cs">
+      <DependentUpon>fBookEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\fManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\fManagement.Designer.cs">
+      <DependentUpon>fManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLL\SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLL\SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ENTITY\REVIEW.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\sp_helpdiagrams_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\SUPPORT.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\sysdiagram.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USER_REVIEW.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_GetAccountDetailList_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_GetAccountList_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_GetBookList_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_GetSupportList_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ENTITY\USP_Login_Result.cs">
+      <DependentUpon>eDA_CNPM.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PLL\MainFormForUser.resx">
+      <DependentUpon>MainFormForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\fBookAdd.resx">
+      <DependentUpon>fBookAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\fBookDetail.resx">
+      <DependentUpon>fBookDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\fBookEdit.resx">
+      <DependentUpon>fBookEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\fManagement.resx">
+      <DependentUpon>fManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\.resx" />
+    <EmbeddedResource Include="PLL\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLL\SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="ENTITY\eDA_CNPM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>eDA_CNPM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ENTITY\eDA_CNPM.edmx.diagram">
+      <DependentUpon>eDA_CNPM.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ENTITY\eDA_CNPM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>eDA_CNPM.Context.cs</LastGenOutput>
+      <DependentUpon>eDA_CNPM.edmx</DependentUpon>
+    </Content>
+    <Content Include="ENTITY\eDA_CNPM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>eDA_CNPM.edmx</DependentUpon>
+      <LastGenOutput>eDA_CNPM.cs</LastGenOutput>
+    </Content>
+    <Content Include="TextFile1.txt" />
+    <Content Include="USP\USP_GetRandomBook.sql" />
+    <Content Include="USP\USP_Login_User.sql" />
+    <Content Include="USP\USP_SearchBook.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
