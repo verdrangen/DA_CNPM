@@ -35,12 +35,18 @@ namespace DA_CNPM.PLL
                 //else MessageBox.Show("NULL");
             }
             tb_NXB.Text = book.PUBLISH_YEAR.ToString();
-            rtb_book_pdf.Text = book.PDF_LINK;
+            ll_book_pdf.Text = book.PDF_LINK;
+            ll_book_pdf.LinkArea = new LinkArea(0, book.PDF_LINK.Trim().Length);
             tb_TongQuan.Text = book.OVERVIEW;
             byte[] img = book.COVER;
             MemoryStream byteimg = new MemoryStream(img);
             Image image = new Bitmap(byteimg);
             pb_book_cover.Image = image;
+        }
+
+        private void ll_book_pdf_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(ll_book_pdf.Text);
         }
     }
 }

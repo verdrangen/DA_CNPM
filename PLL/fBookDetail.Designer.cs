@@ -41,12 +41,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pn_LinkPDF = new System.Windows.Forms.Panel();
-            this.rtb_book_pdf = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.ll_book_pdf = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_book_cover)).BeginInit();
             this.pn_LinkPDF.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -167,24 +169,13 @@
             // 
             // pn_LinkPDF
             // 
-            this.pn_LinkPDF.Controls.Add(this.rtb_book_pdf);
+            this.pn_LinkPDF.Controls.Add(this.panel2);
             this.pn_LinkPDF.Controls.Add(this.label5);
             this.pn_LinkPDF.Location = new System.Drawing.Point(372, 186);
             this.pn_LinkPDF.Margin = new System.Windows.Forms.Padding(2);
             this.pn_LinkPDF.Name = "pn_LinkPDF";
             this.pn_LinkPDF.Size = new System.Drawing.Size(510, 81);
             this.pn_LinkPDF.TabIndex = 12;
-            // 
-            // rtb_book_pdf
-            // 
-            this.rtb_book_pdf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtb_book_pdf.Location = new System.Drawing.Point(150, 3);
-            this.rtb_book_pdf.Name = "rtb_book_pdf";
-            this.rtb_book_pdf.ReadOnly = true;
-            this.rtb_book_pdf.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
-            this.rtb_book_pdf.Size = new System.Drawing.Size(360, 75);
-            this.rtb_book_pdf.TabIndex = 12;
-            this.rtb_book_pdf.Text = "";
             // 
             // label5
             // 
@@ -207,6 +198,24 @@
             this.label6.Size = new System.Drawing.Size(56, 24);
             this.label6.TabIndex = 13;
             this.label6.Text = "Mô tả";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.ll_book_pdf);
+            this.panel2.Location = new System.Drawing.Point(149, 4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(358, 76);
+            this.panel2.TabIndex = 12;
+            // 
+            // ll_book_pdf
+            // 
+            this.ll_book_pdf.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ll_book_pdf.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
+            this.ll_book_pdf.Location = new System.Drawing.Point(0, 0);
+            this.ll_book_pdf.Name = "ll_book_pdf";
+            this.ll_book_pdf.Size = new System.Drawing.Size(358, 76);
+            this.ll_book_pdf.TabIndex = 1;
+            this.ll_book_pdf.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ll_book_pdf_LinkClicked);
             // 
             // fBookDetail
             // 
@@ -236,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pb_book_cover)).EndInit();
             this.pn_LinkPDF.ResumeLayout(false);
             this.pn_LinkPDF.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,6 +268,7 @@
         private System.Windows.Forms.Panel pn_LinkPDF;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RichTextBox rtb_book_pdf;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.LinkLabel ll_book_pdf;
     }
 }
